@@ -70,14 +70,21 @@
 
     .gumroad-button {
       display: inline-block;
-      margin-top: 3rem;
-      padding: 0.75rem 1.5rem;
+      margin-top: 2rem;
+      padding: 0.9rem 2rem;
       background-color: #fff;
       color: #000;
       font-weight: bold;
+      font-size: 1rem;
+      letter-spacing: 1px;
       text-decoration: none;
       border: none;
       cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .gumroad-button:hover {
+      background-color: #ccc;
     }
   </style>
 </head>
@@ -92,14 +99,12 @@
       <button type="submit">SEND MESSAGE</button>
     </form>
 
-    <div>
-      <a class="gumroad-button" href="https://crownedbysilence.gumroad.com/l/blackscripture" data-gumroad-overlay-checkout="true">
-        BUY NOW
-      </a>
-      <script src="https://gumroad.com/js/gumroad.js"></script>
-    </div>
+    <a class="gumroad-button" href="https://crownedbysilence.gumroad.com/l/blackscripture" target="_blank">
+      SHOP THE COLLECTION
+    </a>
 
     <div class="footer">© 2025 CROWNED BY SILENCE</div>
   </main>
+  <script src="https://gumroad.com/js/gumroad.js"></script>
 </body>
 </html>
