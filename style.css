@@ -8,33 +8,18 @@ body, html {
   width: 100%;
   height: 100%;
   font-family: 'Alternative Calvin Klein', sans-serif;
-  background-color: #000;
+  background: url('images/header.png') no-repeat center center fixed;
+  background-size: cover;
   color: #fff;
 }
 
 header {
-  position: relative; /* ✅ This is critical */
   height: 100vh;
-  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-}
-
-.header-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
-  opacity: 0.4;
-}
-
-.header-content {
-  z-index: 2;
+  background: rgba(0, 0, 0, 0.5); /* Optional overlay */
 }
 
 header h1 {
