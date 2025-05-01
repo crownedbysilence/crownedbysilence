@@ -421,6 +421,7 @@ footer {
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
+<<<<<<< HEAD
     .nav-links {
         position: fixed;
         top: 60px;
@@ -483,3 +484,6 @@ footer {
         background-position: 80% center;
     }
 } 
+=======
+    .n
+>>>>>>> d056d8d (Complete website update)

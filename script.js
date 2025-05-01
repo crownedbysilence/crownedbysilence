@@ -51,42 +51,42 @@ const products = [
         title: "Artwork Title",
         description: "This stunning piece combines vibrant colors and abstract forms to create a unique visual experience. Created using digital painting techniques.<br><br>Available as a limited edition print.",
         image: "images/portfolio-1.jpg",
-        gumroadId: "YOUR_GUMROAD_PRODUCT_ID_1"
+        gumroadId: "coming-soon"
     },
     {
         id: 2,
         title: "Ethereal Dreams",
         description: "A dreamy landscape that evokes a sense of calm and wonder. This piece features soft pastel colors and flowing forms.<br><br>Available as a limited edition print.",
         image: "images/portfolio-2.jpg",
-        gumroadId: "YOUR_GUMROAD_PRODUCT_ID_2"
+        gumroadId: "coming-soon"
     },
     {
         id: 3,
         title: "Urban Reflections",
         description: "An exploration of city life through abstract forms and reflective surfaces. This digital art piece captures the energy of urban environments.<br><br>Available as a limited edition print.",
         image: "images/portfolio-3.jpg",
-        gumroadId: "YOUR_GUMROAD_PRODUCT_ID_3"
+        gumroadId: "coming-soon"
     },
     {
         id: 4,
         title: "Cosmic Journey",
         description: "An illustration depicting the vast wonders of space exploration. Features a rich color palette and intricate details.<br><br>Available as a limited edition print.",
         image: "images/portfolio-4.jpg",
-        gumroadId: "YOUR_GUMROAD_PRODUCT_ID_4"
+        gumroadId: "coming-soon"
     },
     {
         id: 5,
         title: "Natural Harmony",
         description: "A digital painting celebrating the beauty of nature. Features organic shapes and a harmonious color palette.<br><br>Available as a limited edition print.",
         image: "images/portfolio-5.jpg",
-        gumroadId: "YOUR_GUMROAD_PRODUCT_ID_5"
+        gumroadId: "coming-soon"
     },
     {
         id: 6,
         title: "Abstract Emotions",
         description: "A mixed media piece exploring human emotions through abstract forms and vibrant colors.<br><br>Available as a limited edition print.",
         image: "images/portfolio-6.jpg",
-        gumroadId: "YOUR_GUMROAD_PRODUCT_ID_6"
+        gumroadId: "coming-soon"
     }
 ];
 
@@ -114,18 +114,41 @@ function loadGumroadEmbed(gumroadId) {
     // Clear previous embed
     gumroadContainer.innerHTML = '';
     
-    // Create Gumroad embed
-    const gumroadScript = document.createElement('script');
-    gumroadScript.src = 'https://gumroad.com/js/gumroad.js';
-    gumroadScript.async = true;
-    
-    const gumroadLink = document.createElement('a');
-    gumroadLink.href = `https://gumroad.com/l/${gumroadId}`;
-    gumroadLink.className = 'gumroad-button';
-    gumroadLink.textContent = 'Buy Now';
-    
-    gumroadContainer.appendChild(gumroadScript);
-    gumroadContainer.appendChild(gumroadLink);
+    if (gumroadId === "coming-soon" || gumroadId.includes("YOUR_GUMROAD_PRODUCT_ID")) {
+        // Display "Coming Soon" message
+        const comingSoonMsg = document.createElement('div');
+        comingSoonMsg.className = 'coming-soon-message';
+        comingSoonMsg.innerHTML = '<h3>Coming Soon</h3><p>This artwork will be available for purchase shortly. Please check back later or contact us for more information.</p>';
+        
+        const contactBtn = document.createElement('button');
+        contactBtn.className = 'contact-btn';
+        contactBtn.textContent = 'Contact for Inquiry';
+        contactBtn.onclick = function() {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+            const contactSection = document.getElementById('contact');
+            window.scrollTo({
+                top: contactSection.offsetTop - 60,
+                behavior: 'smooth'
+            });
+        };
+        
+        comingSoonMsg.appendChild(contactBtn);
+        gumroadContainer.appendChild(comingSoonMsg);
+    } else {
+        // Create Gumroad embed
+        const gumroadScript = document.createElement('script');
+        gumroadScript.src = 'https://gumroad.com/js/gumroad.js';
+        gumroadScript.async = true;
+        
+        const gumroadLink = document.createElement('a');
+        gumroadLink.href = `https://gumroad.com/l/${gumroadId}`;
+        gumroadLink.className = 'gumroad-button';
+        gumroadLink.textContent = 'Buy Now';
+        
+        gumroadContainer.appendChild(gumroadScript);
+        gumroadContainer.appendChild(gumroadLink);
+    }
 }
 
 // Close modal
@@ -142,7 +165,7 @@ window.addEventListener('click', (e) => {
     }
 });
 
-// Contact form submission (Zoho Mail integration)
+// Contact form submission
 document.getElementById('contactForm').addEventListener('submit', function(e) {
     e.preventDefault();
     
@@ -160,7 +183,7 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     };
     
     // Replace with the URL of your email handling script
-    const emailHandlerUrl = 'YOUR_EMAIL_HANDLER_URL';
+    const emailHandlerUrl = 'https://www.crownedbysilence.com/email-handler.php';
     
     // Send the data to your server
     fetch(emailHandlerUrl, {
