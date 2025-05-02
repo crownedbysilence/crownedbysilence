@@ -8,7 +8,7 @@ body, html {
   width: 100%;
   height: 100%;
   font-family: 'Alternative Calvin Klein', sans-serif;
-  background: url('images/header.png') no-repeat center center fixed;
+  background: url('bg.png') no-repeat center center fixed;
   background-size: cover;
   color: #fff;
 }
