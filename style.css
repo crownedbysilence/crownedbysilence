@@ -59,7 +59,11 @@ footer a {
   }
 }
 
-body {
-  background-position: 80% center !important;
+@media (max-width: 768px) {
+  header {
+    background-position: center 62%;
+  }
 }
+
+
 
