@@ -47,7 +47,7 @@ footer a {
 
 @media (max-width: 768px) {
   header {
-    background-position: center 47%; /* Adjust this Y percentage if needed */
+    background-position: center 18%; /* Center the castle ONLY in the header */
   }
 }
 
