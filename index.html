@@ -244,3 +244,26 @@
   </script>
 </body>
 </html>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('nav-links');
+      nav.classList.toggle('active');
+    }
+  </script>
+
+  <script>
+    // Disable right-click
+    document.addEventListener('contextmenu', event => event.preventDefault());
+
+    // Disable drag of images
+    document.querySelectorAll('img').forEach(img => {
+      img.setAttribute('draggable', 'false');
+      img.addEventListener('dragstart', e => e.preventDefault());
+    });
+
+    // Disable text selection
+    document.addEventListener('selectstart', e => e.preventDefault());
+  </script>
+</body>
+</html>
