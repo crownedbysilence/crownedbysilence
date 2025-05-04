@@ -1,64 +1,101 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>CROWNED BY SILENCE</title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Helvetica Neue', sans-serif;
+Crowned By Silence
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
     }
-    header {
-      background: transparent;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: fixed;
-      width: 100%;
-      top: 0;
-      z-index: 1000;
-    }
-    .logo {
-      font-weight: bold;
-      color: white;
-      text-decoration: none;
-      line-height: 1.2;
-      letter-spacing: 0.05em;
-    }
-    .nav-links a {
-      color: white;
-      text-decoration: none;
-      margin-left: 1.5rem;
-      font-size: 0.95rem;
-    }
-    .header-content {
-      text-align: center;
-      padding: 10rem 2rem 4rem;
-    }
-    .header-content h1 {
-      font-size: 2.5rem;
-      color: white;
-      margin-bottom: 0.5rem;
-    }
-    .header-content p {
-      color: #ccc;
-      font-size: 1rem;
-    }
-    .portfolio {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1rem;
-      padding: 2rem;
-      margin-top: 1rem;
-    }
+
     @media (min-width: 768px) {
       .portfolio {
         grid-template-columns: repeat(3, 1fr);
       }
     }
+
     .portfolio img {
       width: 100%;
       height: auto;
@@ -66,21 +103,46 @@
       user-select: none;
       -webkit-user-drag: none;
       border-radius: 4px;
+      object-fit: cover;
     }
+
     footer {
       background: transparent;
-      padding: 1rem;
+      padding: 2rem 1rem;
       text-align: center;
       text-shadow: 1px 1px 2px #000;
+    }
+
+    footer a {
+      color: #ccc;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    footer img {
+      width: 18px;
+      height: 18px;
+      object-fit: contain;
+    }
+
+    footer img.email {
+      width: 24px;
+    }
+
+    .copyright {
+      color: #666;
+      font-size: 0.75rem;
+      margin-top: 0.5rem;
     }
   </style>
 </head>
 <body>
   <header>
-    <a href="#top" class="logo">
-      CROWNED<br>BY<br>SILENCE
-    </a>
-    <nav class="nav-links">
+    <div class="logo">CROWNED<br>BY<br>SILENCE</div>
+    <nav>
       <a href="#portfolio">portfolio</a>
       <a href="#shop">shop</a>
       <a href="#about">about</a>
@@ -88,7 +150,7 @@
     </nav>
   </header>
 
-  <main id="top">
+  <main>
     <div class="header-content">
       <h1>CROWNED BY SILENCE</h1>
       <p>WHAT YOU SEE HERE WAS BUILT IN THE DARK.</p>
@@ -102,21 +164,17 @@
   </main>
 
   <footer>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem;">
-      <a href="https://instagram.com/crownedbysilence" target="_blank"
-         style="color:#ccc; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
-        <img src="instagram.svg" alt="Instagram"
-             style="width: 18px; height: 18px; display: inline-block; object-fit: contain;">
-        crownedbysilence
-      </a>
-      <a href="mailto:contact@crownedbysilence.com"
-         style="color:#ccc; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
-        <img src="email-icon.svg" alt="Email"
-             style="width: 24px; height: 18px; display: inline-block; object-fit: contain;">
-        contact
-      </a>
-      <p style="color: #666; font-size: 0.75rem; margin-top: 0.5rem;">© 2025 CROWNED BY SILENCE. ALL RIGHTS RESERVED.</p>
+    <a href="https://instagram.com/crownedbysilence" target="_blank">
+      <img src="instagram.svg" alt="Instagram">crownedbysilence
+    </a>
+    <a href="mailto:contact@crownedbysilence.com">
+      <img src="email-icon.svg" alt="Email" class="email">contact
+    </a>
+    <div class="copyright">
+      © 2025 CROWNED BY SILENCE. ALL RIGHTS RESERVED.
     </div>
   </footer>
 </body>
 </html>
+
+
