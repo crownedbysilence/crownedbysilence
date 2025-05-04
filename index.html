@@ -10,93 +10,49 @@
       margin: 0;
       font-family: 'Helvetica Neue', sans-serif;
     }
-
     header {
+      background: transparent;
+      padding: 1rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1rem 2rem;
-      background: transparent;
       position: fixed;
-      top: 0;
       width: 100%;
-      z-index: 999;
+      top: 0;
+      z-index: 1000;
     }
-
     .logo {
       font-weight: bold;
-      font-size: 1rem;
       color: white;
+      text-decoration: none;
       line-height: 1.2;
+      letter-spacing: 0.05em;
     }
-
-    nav {
-      display: flex;
-      gap: 2rem;
-    }
-
-    nav a {
+    .nav-links a {
       color: white;
       text-decoration: none;
+      margin-left: 1.5rem;
+      font-size: 0.95rem;
+    }
+    .header-content {
+      text-align: center;
+      padding: 10rem 2rem 4rem;
+    }
+    .header-content h1 {
+      font-size: 2.5rem;
+      color: white;
+      margin-bottom: 0.5rem;
+    }
+    .header-content p {
+      color: #ccc;
       font-size: 1rem;
     }
-
-    .menu-toggle {
-      display: none;
-      flex-direction: column;
-      gap: 0.3rem;
-      cursor: pointer;
-    }
-
-    .menu-toggle div {
-      width: 25px;
-      height: 2px;
-      background-color: white;
-    }
-
-    .mobile-menu {
-      display: none;
-      flex-direction: column;
-      background-color: rgba(0, 0, 0, 0.9);
-      position: absolute;
-      top: 60px;
-      right: 2rem;
-      padding: 1rem;
-    }
-
-    .mobile-menu a {
-      color: white;
-      text-decoration: none;
-      margin: 0.5rem 0;
-    }
-
-    @media (max-width: 768px) {
-      nav {
-        display: none;
-      }
-      .menu-toggle {
-        display: flex;
-      }
-    }
-
-    .header-content {
-      padding-top: 5rem;
-      text-align: center;
-      color: white;
-    }
-
-    footer {
-      background: transparent;
-      padding: 1rem;
-      text-align: center;
-      text-shadow: 1px 1px 2px #000;
-    }
-
     .portfolio {
       display: grid;
       grid-template-columns: 1fr;
       gap: 1rem;
       padding: 2rem;
+      margin-top: 1rem;
     }
     @media (min-width: 768px) {
       .portfolio {
@@ -111,48 +67,39 @@
       -webkit-user-drag: none;
       border-radius: 4px;
     }
-  </style>
-  <script>
-    function toggleMenu() {
-      const menu = document.getElementById('mobileMenu');
-      menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+    footer {
+      background: transparent;
+      padding: 1rem;
+      text-align: center;
+      text-shadow: 1px 1px 2px #000;
     }
-  </script>
+  </style>
 </head>
 <body>
   <header>
-    <div class="logo">
+    <a href="#top" class="logo">
       CROWNED<br>BY<br>SILENCE
-    </div>
-    <nav>
+    </a>
+    <nav class="nav-links">
       <a href="#portfolio">portfolio</a>
       <a href="#shop">shop</a>
       <a href="#about">about</a>
       <a href="#contact">contact</a>
     </nav>
-    <div class="menu-toggle" onclick="toggleMenu()">
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-    <div class="mobile-menu" id="mobileMenu">
-      <a href="#portfolio">portfolio</a>
-      <a href="#shop">shop</a>
-      <a href="#about">about</a>
-      <a href="#contact">contact</a>
-    </div>
   </header>
 
-  <div class="header-content">
-    <h1>CROWNED BY SILENCE</h1>
-    <p>WHAT YOU SEE HERE WAS BUILT IN THE DARK.</p>
-  </div>
+  <main id="top">
+    <div class="header-content">
+      <h1>CROWNED BY SILENCE</h1>
+      <p>WHAT YOU SEE HERE WAS BUILT IN THE DARK.</p>
+    </div>
 
-  <section class="portfolio" id="portfolio">
-    <img src="portfolio3.jpg" alt="Portfolio Image 3" draggable="false" />
-    <img src="portfolio2.jpg" alt="Portfolio Image 2" draggable="false" />
-    <img src="portfolio1.jpg" alt="Portfolio Image 1" draggable="false" />
-  </section>
+    <section class="portfolio" id="portfolio">
+      <img src="portfolio3.jpg" alt="Portfolio Image 3" draggable="false" />
+      <img src="portfolio2.jpg" alt="Portfolio Image 2" draggable="false" />
+      <img src="portfolio1.jpg" alt="Portfolio Image 1" draggable="false" />
+    </section>
+  </main>
 
   <footer>
     <div style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem;">
