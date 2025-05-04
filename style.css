@@ -46,10 +46,9 @@ footer a {
 }
 
 @media (max-width: 768px) {
-  header {
-    background-position: center 18%; /* Center the castle ONLY in the header */
+  body, html {
+    background-position: 75% center;
   }
-}
 
   header h1 {
     font-size: 2rem;
