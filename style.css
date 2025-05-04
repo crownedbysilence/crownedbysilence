@@ -50,8 +50,9 @@ footer a {
     background-position: 75% center;
   }
 
-  header h1 {
-    font-size: 0.2rem;
+   header h1 {
+    font-size: 8vw;
+    letter-spacing: 0;
     white-space: nowrap;
   }
 
