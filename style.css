@@ -23,8 +23,9 @@ header {
 }
 
 header h1 {
-  font-size: 3rem;
+  font-size: 7vw; /* responsive title */
   letter-spacing: 2px;
+  white-space: nowrap;
 }
 
 header p {
@@ -45,29 +46,24 @@ footer a {
   text-decoration: none;
 }
 
+/* Mobile Adjustments */
 @media (max-width: 768px) {
   body, html {
     background-position: 75% center;
   }
 
   header h1 {
-    font-size: 2rem;
+    font-size: 7vw; /* ensure it scales fluidly */
+    white-space: nowrap;
   }
 
   header p {
-    font-size: 1rem;
+    font-size: 0.85rem;
+    white-space: nowrap;
   }
 }
 
+/* Positioning fallback */
 body {
   background-position: 75% center !important;
 }
-
-@media (max-width: 768px) {
-  header p {
-    white-space: nowrap;
-    font-size: 0.85rem;
-  }
-}
-
-
