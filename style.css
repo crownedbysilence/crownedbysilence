@@ -46,9 +46,10 @@ footer a {
 }
 
 @media (max-width: 768px) {
-  body, html {
-    background-position: 75% center;
+  header {
+    background-position: center 47%; /* Adjust this Y percentage if needed */
   }
+}
 
   header h1 {
     font-size: 2rem;
