@@ -63,11 +63,6 @@ body {
   background-position: 75% center !important;
 }
 
-@media (max-width: 768px) {
-  header p {
-    white-space: nowrap;
-    font-size: 0.85rem;
-  }
-}
+
 
 
