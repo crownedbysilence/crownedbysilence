@@ -19,7 +19,8 @@ header {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: rgba(0, 0, 0, 0.5); /* Optional overlay */
+  background: url('bg.png') no-repeat center center;
+  background-size: cover;
 }
 
 header h1 {
@@ -46,8 +47,10 @@ footer a {
 }
 
 @media (max-width: 768px) {
-  body, html {
-    background-position: 75% center;
+  header {
+    background-position: center center;
+    background-attachment: scroll;
+    background-size: cover;
   }
 
   header h1 {
