@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  font-family: 'Alternative Calvin Klein', sans-serif;
+  background: url('bg.png') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+}
+
+header {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5); /* Optional overlay */
+}
+
+header h1 {
+  font-size: 3rem;
+  letter-spacing: 2px;
+}
+
+header p {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  background: #111;
+}
+
+footer a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  body, html {
+    background-position: 75% center;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+}
+
+body {
+  background-position: 75% center !important;
+}
+
+@media (max-width: 768px) {
+  header p {
+    white-space: nowrap;
+    font-size: 0.85rem;
+  }
+}
+
+
