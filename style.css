@@ -51,8 +51,11 @@ footer a {
   }
 
   header h1 {
-    font-size: 2rem;
+    font-size: 6vw;
+    letter-spacing: 1px;
+    white-space: nowrap;
   }
+}
 
   header p {
     font-size: 1rem;
