@@ -6,78 +6,92 @@
   <title>CROWNED BY SILENCE</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    * {
+    body {
       margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+      font-family: 'Helvetica Neue', sans-serif;
     }
-    body, html {
-      width: 100%;
-      height: 100%;
-      font-family: 'Alternative Calvin Klein', sans-serif;
-      background: url('bg.png') no-repeat center center fixed;
-      background-size: cover;
-      color: #fff;
-    }
+
     header {
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
-    .header-content {
-      z-index: 1;
-    }
-    .nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 1rem 2rem;
       background: transparent;
-      color: white;
+      position: fixed;
+      top: 0;
+      width: 100%;
       z-index: 999;
     }
-    .nav .logo {
-      font-size: 1rem;
-      letter-spacing: 2px;
+
+    .logo {
       font-weight: bold;
+      font-size: 1rem;
+      color: white;
+      line-height: 1.2;
     }
-    .nav ul {
-      list-style: none;
+
+    nav {
       display: flex;
       gap: 2rem;
     }
-    .nav a {
+
+    nav a {
       color: white;
       text-decoration: none;
-      font-size: 0.9rem;
-      transition: 0.2s;
+      font-size: 1rem;
     }
-    .nav a:hover {
-      opacity: 0.7;
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 0.3rem;
+      cursor: pointer;
     }
+
+    .menu-toggle div {
+      width: 25px;
+      height: 2px;
+      background-color: white;
+    }
+
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      background-color: rgba(0, 0, 0, 0.9);
+      position: absolute;
+      top: 60px;
+      right: 2rem;
+      padding: 1rem;
+    }
+
+    .mobile-menu a {
+      color: white;
+      text-decoration: none;
+      margin: 0.5rem 0;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+      }
+      .menu-toggle {
+        display: flex;
+      }
+    }
+
+    .header-content {
+      padding-top: 5rem;
+      text-align: center;
+      color: white;
+    }
+
     footer {
       background: transparent;
-      padding: 2rem 1rem;
+      padding: 1rem;
       text-align: center;
       text-shadow: 1px 1px 2px #000;
     }
-    footer img {
-      vertical-align: middle;
-    }
-    footer a {
-      color: #ccc;
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      justify-content: center;
-      margin: 0.2rem 0;
-    }
+
     .portfolio {
       display: grid;
       grid-template-columns: 1fr;
@@ -97,50 +111,65 @@
       -webkit-user-drag: none;
       border-radius: 4px;
     }
-    @media (max-width: 768px) {
-      .nav ul {
-        gap: 1rem;
-      }
-    }
   </style>
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+    }
+  </script>
 </head>
 <body>
-  <nav class="nav">
-    <div class="logo">CROWNED BY SILENCE</div>
-    <ul>
-      <li><a href="#portfolio">portfolio</a></li>
-      <li><a href="#shop">shop</a></li>
-      <li><a href="#about">about</a></li>
-      <li><a href="mailto:contact@crownedbysilence.com">contact</a></li>
-    </ul>
-  </nav>
-
   <header>
-    <div class="header-content">
-      <h1>CROWNED BY SILENCE</h1>
-      <p>WHAT YOU SEE HERE WAS BUILT IN THE DARK.</p>
+    <div class="logo">
+      CROWNED<br>BY<br>SILENCE
+    </div>
+    <nav>
+      <a href="#portfolio">portfolio</a>
+      <a href="#shop">shop</a>
+      <a href="#about">about</a>
+      <a href="#contact">contact</a>
+    </nav>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#portfolio">portfolio</a>
+      <a href="#shop">shop</a>
+      <a href="#about">about</a>
+      <a href="#contact">contact</a>
     </div>
   </header>
 
-  <section id="portfolio" class="portfolio">
+  <div class="header-content">
+    <h1>CROWNED BY SILENCE</h1>
+    <p>WHAT YOU SEE HERE WAS BUILT IN THE DARK.</p>
+  </div>
+
+  <section class="portfolio" id="portfolio">
     <img src="portfolio3.jpg" alt="Portfolio Image 3" draggable="false" />
     <img src="portfolio2.jpg" alt="Portfolio Image 2" draggable="false" />
     <img src="portfolio1.jpg" alt="Portfolio Image 1" draggable="false" />
   </section>
 
   <footer>
-    <a href="https://instagram.com/crownedbysilence" target="_blank">
-      <img src="instagram.svg" alt="Instagram" width="18" height="18" />
-      crownedbysilence
-    </a>
-    <a href="mailto:contact@crownedbysilence.com">
-      <img src="email-icon.svg" alt="Email" width="24" height="18" />
-      contact
-    </a>
-    <p style="color: #666; font-size: 0.75rem; margin-top: 0.5rem;">
-      © 2025 CROWNED BY SILENCE. ALL RIGHTS RESERVED.
-    </p>
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem;">
+      <a href="https://instagram.com/crownedbysilence" target="_blank"
+         style="color:#ccc; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+        <img src="instagram.svg" alt="Instagram"
+             style="width: 18px; height: 18px; display: inline-block; object-fit: contain;">
+        crownedbysilence
+      </a>
+      <a href="mailto:contact@crownedbysilence.com"
+         style="color:#ccc; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+        <img src="email-icon.svg" alt="Email"
+             style="width: 24px; height: 18px; display: inline-block; object-fit: contain;">
+        contact
+      </a>
+      <p style="color: #666; font-size: 0.75rem; margin-top: 0.5rem;">© 2025 CROWNED BY SILENCE. ALL RIGHTS RESERVED.</p>
+    </div>
   </footer>
 </body>
 </html>
-
