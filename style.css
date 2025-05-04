@@ -50,9 +50,10 @@ footer a {
     background-position: 75% center;
   }
 
+@media (max-width: 768px) {
   header h1 {
-    font-size: 6vw;
-    letter-spacing: 1px;
+    font-size: 4.8vw;
+    letter-spacing: 0.5px;
     white-space: nowrap;
   }
 }
