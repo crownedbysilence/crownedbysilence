@@ -2,15 +2,45 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>CROWNED BY SILENCE</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    footer {
-      background: transparent;
-      padding: 1rem;
+    body {
+      margin: 0;
+      font-family: 'Helvetica Neue', sans-serif;
+      background: url('bg.png') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 2rem;
+      position: relative;
+      z-index: 10;
+    }
+
+    .nav-left {
+      font-weight: bold;
+      letter-spacing: 0.15em;
+      line-height: 1.2em;
+    }
+
+    .nav-right a {
+      color: white;
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-size: 1rem;
+    }
+
+    header {
       text-align: center;
-      text-shadow: 1px 1px 2px #000;
+      margin-top: 4rem;
+      padding: 2rem;
+      background: transparent;
     }
 
     .portfolio {
@@ -34,38 +64,73 @@
       -webkit-user-drag: none;
       border-radius: 4px;
     }
+
+    footer {
+      background: transparent;
+      padding: 2rem;
+      text-align: center;
+      text-shadow: 1px 1px 2px #000;
+    }
+
+    footer a {
+      color: #ccc;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+
+    footer img {
+      width: 18px;
+      height: 18px;
+      object-fit: contain;
+    }
+
+    footer .email-icon {
+      width: 24px;
+    }
+
+    footer p {
+      color: #666;
+      font-size: 0.75rem;
+      margin-top: 0.5rem;
+    }
   </style>
 </head>
 <body>
-  <header>
-    <div class="header-content">
-      <h1>CROWNED BY SILENCE</h1>
-      <p>WHAT YOU SEE HERE WAS BUILT IN THE DARK.</p>
+  <nav>
+    <div class="nav-left">
+      <div>CROWNED<br>BY<br>SILENCE</div>
     </div>
+    <div class="nav-right">
+      <a href="#portfolio">portfolio</a>
+      <a href="#shop">shop</a>
+      <a href="#about">about</a>
+      <a href="#contact">contact</a>
+    </div>
+  </nav>
+
+  <header>
+    <h1>CROWNED BY SILENCE</h1>
+    <p>WHAT YOU SEE HERE WAS BUILT IN THE DARK.</p>
   </header>
 
-  <section class="portfolio">
+  <section class="portfolio" id="portfolio">
     <img src="portfolio3.jpg" alt="Portfolio Image 3" draggable="false" />
     <img src="portfolio2.jpg" alt="Portfolio Image 2" draggable="false" />
     <img src="portfolio1.jpg" alt="Portfolio Image 1" draggable="false" />
   </section>
 
-  <footer>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem;">
-      <a href="https://instagram.com/crownedbysilence" target="_blank"
-         style="color:#ccc; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
-        <img src="instagram.svg" alt="Instagram"
-             style="width: 18px; height: 18px; display: inline-block; object-fit: contain;">
-        crownedbysilence
-      </a>
-      <a href="mailto:contact@crownedbysilence.com"
-         style="color:#ccc; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
-        <img src="email-icon.svg" alt="Email"
-             style="width: 24px; height: 18px; display: inline-block; object-fit: contain;">
-        contact
-      </a>
-      <p style="color: #666; font-size: 0.75rem; margin-top: 0.5rem;">© 2025 CROWNED BY SILENCE. ALL RIGHTS RESERVED.</p>
-    </div>
+  <footer id="contact">
+    <a href="https://instagram.com/crownedbysilence" target="_blank">
+      <img src="instagram.svg" alt="Instagram"> crownedbysilence
+    </a>
+    <a href="mailto:contact@crownedbysilence.com">
+      <img src="email-icon.svg" alt="Email" class="email-icon"> contact
+    </a>
+    <p>© 2025 CROWNED BY SILENCE. ALL RIGHTS RESERVED.</p>
   </footer>
 </body>
 </html>
