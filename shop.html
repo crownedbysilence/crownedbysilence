@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SHOP — CROWNED BY SILENCE</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="logo">CROWNED BY SILENCE</a>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="nav-links" id="nav-links">
+      <a href="portfolio.html">portfolio</a>
+      <a href="shop.html">shop</a>
+      <a href="index.html#about">about</a>
+      <a href="index.html#contact">contact</a>
+    </div>
+  </nav>
+
+  <header>
+    <h1>SHOP</h1>
+    <p>EXCLUSIVE PRINTS — COMING SOON</p>
+  </header>
+
+  <section id="shop-grid" class="portfolio">
+    <img src="shop1.jpg" alt="Shop Item 1" draggable="false" />
+    <img src="shop2.jpg" alt="Shop Item 2" draggable="false" />
+    <img src="shop3.jpg" alt="Shop Item 3" draggable="false" />
+  </section>
+
+  <footer>
+    <div style="display: flex; justify-content: center; gap: 2rem; align-items: center; padding: 1rem;">
+      <a href="https://instagram.com/crownedbysilence" target="_blank">
+        <img src="instagram.svg" alt="Instagram" style="width: 24px; height: 24px;">
+      </a>
+      <a href="mailto:contact@crownedbysilence.com">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#fff" viewBox="0 0 24 24">
+          <path d="M12 13.065L.75 4.5h22.5L12 13.065zm0 2.17L.75 6.67v12.83h22.5V6.67L12 15.235z"/>
+        </svg>
+      </a>
+    </div>
+    <p class="copyright" style="text-align: center; color: #ccc; font-size: 0.9rem;">
+      © 2025 CROWNED BY SILENCE. ALL RIGHTS RESERVED.
+    </p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('nav-links');
+      nav.classList.toggle('active');
+    }
+
+    document.addEventListener('contextmenu', event => event.preventDefault());
+    document.querySelectorAll('img').forEach(img => {
+      img.setAttribute('draggable', 'false');
+      img.addEventListener('dragstart', e => e.preventDefault());
+    });
+    document.addEventListener('selectstart', e => e.preventDefault());
+  </script>
+</body>
+</html>
