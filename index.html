@@ -8,7 +8,7 @@
   <style>
     body {
       margin: 0;
-      font-family: 'Helvetica Neue', sans-serif;
+      font-family: 'Alternative Calvin Klein', sans-serif;
       color: #fff;
       background: url('bg.png') no-repeat center center fixed;
       background-size: cover;
@@ -43,6 +43,7 @@
       color: #ccc;
       text-decoration: none;
       font-size: 0.9rem;
+      text-transform: uppercase;
       transition: color 0.2s ease;
     }
 
@@ -71,6 +72,15 @@
       font-size: 1rem;
       color: #ccc;
       margin: 0;
+    }
+
+    .tagline {
+      font-size: 0.85rem;
+      font-family: 'Alternative Calvin Klein', sans-serif;
+      color: #aaa;
+      margin-top: 0.5rem;
+      font-weight: normal;
+      text-transform: uppercase;
     }
 
     .portfolio {
@@ -202,20 +212,18 @@
       <span></span>
     </div>
     <div class="nav-links" id="nav-links">
-      <a href="portfolio.html">portfolio</a>
-      <a href="shop.html">shop</a>
-      <a href="#about">about</a>
-      <a href="#contact">contact</a>
+      <a href="portfolio.html">PORTFOLIO</a>
+      <a href="shop.html">SHOP</a>
+      <a href="#about">ABOUT</a>
+      <a href="#contact">CONTACT</a>
     </div>
   </nav>
 
-<header>
-  <h1>CROWNED BY SILENCE</h1>
-  <p>WHAT YOU SEE HERE WAS BUILT IN THE DARK</p>
-  <p style="font-size: 0.85rem; font-family: 'Alternative Calvin Klein', sans-serif; color: #aaa; margin-top: 0.5rem; font-weight: normal;">
-    A fine art project
-  </p>
-</header>
+  <header>
+    <h1>CROWNED BY SILENCE</h1>
+    <p>WHAT YOU SEE HERE WAS BUILT IN THE DARK</p>
+    <p class="tagline">A FINE ART PROJECT</p>
+  </header>
 
   <section id="portfolio" class="portfolio">
     <img src="portfolio1.jpg" alt="Portfolio Image 1" draggable="false" />
@@ -253,7 +261,7 @@
         </svg>
       </a>
     </div>
-    <p class="copyright" style="text-align: center; color: #ccc; font-size: 0.9rem;">
+    <p class="copyright">
       © 2025 CROWNED BY SILENCE. ALL RIGHTS RESERVED.
     </p>
   </footer>
@@ -264,7 +272,6 @@
       nav.classList.toggle('active');
     }
 
-    // Disable right-click and drag
     document.addEventListener('contextmenu', event => event.preventDefault());
     document.querySelectorAll('img').forEach(img => {
       img.setAttribute('draggable', 'false');
