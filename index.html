@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -95,23 +96,6 @@
       border-radius: 4px;
     }
 
-    .view-all-button {
-      display: inline-block;
-      padding: 0.8rem 1.6rem;
-      background: none;
-      color: #fff;
-      border: 2px solid #fff;
-      text-decoration: none;
-      font-size: 1rem;
-      margin-top: 2rem;
-      transition: background 0.3s, color 0.3s;
-    }
-
-    .view-all-button:hover {
-      background: #fff;
-      color: #000;
-    }
-
     section {
       padding: 4rem 2rem;
       text-align: center;
@@ -191,11 +175,28 @@
         display: flex;
       }
     }
+
+    .view-all-button {
+      display: inline-block;
+      padding: 0.8rem 1.6rem;
+      background: none;
+      color: #fff;
+      border: 2px solid #fff;
+      text-decoration: none;
+      font-size: 1rem;
+      margin: auto;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .view-all-button:hover {
+      background: #fff;
+      color: #000;
+    }
   </style>
 </head>
 <body>
   <nav>
-    <a href="#" class="logo">CROWNED BY SILENCE</a>
+    <a href="index.html" class="logo">CROWNED BY SILENCE</a>
     <div class="hamburger" onclick="toggleMenu()">
       <span></span>
       <span></span>
@@ -203,7 +204,7 @@
     </div>
     <div class="nav-links" id="nav-links">
       <a href="portfolio.html">portfolio</a>
-      <a href="#shop">shop</a>
+      <a href="shop.html">shop</a>
       <a href="#about">about</a>
       <a href="#contact">contact</a>
     </div>
@@ -218,14 +219,10 @@
     <img src="portfolio1.jpg" alt="Portfolio Image 1" draggable="false" />
     <img src="portfolio2.jpg" alt="Portfolio Image 2" draggable="false" />
     <img src="portfolio3.jpg" alt="Portfolio Image 3" draggable="false" />
-    <div style="text-align: center;">
+
+    <div style="text-align: center; margin-top: 2rem;">
       <a href="portfolio.html" class="view-all-button">VIEW FULL PORTFOLIO</a>
     </div>
-  </section>
-
-  <section id="shop">
-    <h2>SHOP</h2>
-    <p>COMING SOON — EXCLUSIVE PRINTS</p>
   </section>
 
   <section id="about">
@@ -255,7 +252,7 @@
         </svg>
       </a>
     </div>
-    <p class="copyright">
+    <p class="copyright" style="text-align: center; color: #ccc; font-size: 0.9rem;">
       © 2025 CROWNED BY SILENCE. ALL RIGHTS RESERVED.
     </p>
   </footer>
