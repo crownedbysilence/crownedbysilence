@@ -5,17 +5,109 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Full Portfolio — CROWNED BY SILENCE</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Alternative Calvin Klein', sans-serif;
+      background: url('bg.png') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      color: #ccc;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: #fff;
+    }
+
+    header {
+      padding-top: 7rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      letter-spacing: 2px;
+    }
+
+    .portfolio {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      padding: 4rem 2rem;
+    }
+
+    .portfolio img {
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+      object-fit: cover;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    footer {
+      background: #111;
+      padding: 2rem 1rem;
+      text-align: center;
+      text-shadow: 1px 1px 2px #000;
+    }
+
+    footer a {
+      color: #ccc;
+      text-decoration: none;
+      margin: 0 1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    footer img {
+      width: 18px;
+      height: 18px;
+      object-fit: contain;
+    }
+
+    .copyright {
+      margin-top: 1rem;
+      color: #666;
+      font-size: 0.75rem;
+    }
+  </style>
 </head>
 <body>
-  <!-- NAVIGATION -->
   <nav>
     <a href="index.html" class="logo">CROWNED BY SILENCE</a>
-    <div class="hamburger" onclick="toggleMenu()">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-    <div class="nav-links" id="nav-links">
+    <div class="nav-links">
       <a href="index.html">home</a>
       <a href="index.html#portfolio">portfolio</a>
       <a href="index.html#shop">shop</a>
@@ -24,24 +116,22 @@
     </div>
   </nav>
 
-  <!-- HEADER -->
   <header>
     <h1>FULL PORTFOLIO</h1>
   </header>
 
-  <!-- PORTFOLIO GRID -->
   <section id="full-portfolio" class="portfolio">
     <img src="portfolio1.jpg" alt="Portfolio Image 1" draggable="false" />
     <img src="portfolio2.jpg" alt="Portfolio Image 2" draggable="false" />
     <img src="portfolio3.jpg" alt="Portfolio Image 3" draggable="false" />
     <img src="portfolio4.jpg" alt="Portfolio Image 4" draggable="false" />
+    <!-- Add more as needed -->
   </section>
 
-  <!-- FOOTER -->
   <footer>
     <div style="display: flex; justify-content: center; gap: 2rem; align-items: center; padding: 1rem;">
       <a href="https://instagram.com/crownedbysilence" target="_blank">
-        <img src="instagram.svg" alt="Instagram" style="width: 24px; height: 24px;">
+        <img src="instagram.svg" alt="Instagram">
       </a>
       <a href="mailto:contact@crownedbysilence.com">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#fff" viewBox="0 0 24 24">
@@ -49,29 +139,9 @@
         </svg>
       </a>
     </div>
-    <p class="copyright" style="text-align: center; color: #ccc; font-size: 0.9rem;">
+    <p class="copyright">
       © 2025 CROWNED BY SILENCE. ALL RIGHTS RESERVED.
     </p>
   </footer>
-
-  <!-- SCRIPTS -->
-  <script>
-    function toggleMenu() {
-      const nav = document.getElementById('nav-links');
-      nav.classList.toggle('active');
-    }
-
-    // Disable right-click
-    document.addEventListener('contextmenu', event => event.preventDefault());
-
-    // Disable drag of images
-    document.querySelectorAll('img').forEach(img => {
-      img.setAttribute('draggable', 'false');
-      img.addEventListener('dragstart', e => e.preventDefault());
-    });
-
-    // Disable text selection
-    document.addEventListener('selectstart', e => e.preventDefault());
-  </script>
 </body>
 </html>
