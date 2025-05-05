@@ -95,6 +95,23 @@
       border-radius: 4px;
     }
 
+    .view-all-button {
+      display: inline-block;
+      padding: 0.8rem 1.6rem;
+      background: none;
+      color: #fff;
+      border: 2px solid #fff;
+      text-decoration: none;
+      font-size: 1rem;
+      margin-top: 2rem;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .view-all-button:hover {
+      background: #fff;
+      color: #000;
+    }
+
     section {
       padding: 4rem 2rem;
       text-align: center;
@@ -185,7 +202,7 @@
       <span></span>
     </div>
     <div class="nav-links" id="nav-links">
-      <a href="#portfolio">portfolio</a>
+      <a href="portfolio.html">portfolio</a>
       <a href="#shop">shop</a>
       <a href="#about">about</a>
       <a href="#contact">contact</a>
@@ -198,18 +215,18 @@
   </header>
 
   <section id="portfolio" class="portfolio">
-  <img src="portfolio1.jpg" alt="Portfolio Image 1" draggable="false" />
-  <img src="portfolio2.jpg" alt="Portfolio Image 2" draggable="false" />
-  <img src="portfolio3.jpg" alt="Portfolio Image 3" draggable="false" />
-
-  <div style="text-align: center; margin-top: 2rem;">
-    <a href="portfolio.html" class="view-all-button">VIEW FULL PORTFOLIO</a>
-  </div>
-</section>
+    <img src="portfolio1.jpg" alt="Portfolio Image 1" draggable="false" />
+    <img src="portfolio2.jpg" alt="Portfolio Image 2" draggable="false" />
+    <img src="portfolio3.jpg" alt="Portfolio Image 3" draggable="false" />
+    <div style="text-align: center;">
+      <a href="portfolio.html" class="view-all-button">VIEW FULL PORTFOLIO</a>
+    </div>
+  </section>
 
   <section id="shop">
     <h2>SHOP</h2>
     <p>COMING SOON — EXCLUSIVE PRINTS</p>
+  </section>
 
   <section id="about">
     <h2>ABOUT</h2>
@@ -221,43 +238,34 @@
       EACH WORD,<br>
       A SPELL.
     </p>
-  
+  </section>
+
   <section id="contact">
     <h2>CONTACT</h2>
-  
-<footer>
-  <div style="display: flex; justify-content: center; gap: 2rem; align-items: center; padding: 1rem;">
-    <a href="https://instagram.com/crownedbysilence" target="_blank">
-      <img src="instagram.svg" alt="Instagram" style="width: 24px; height: 24px;">
-    </a>
-    <a href="mailto:contact@crownedbysilence.com">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#fff" viewBox="0 0 24 24">
-        <path d="M12 13.065L.75 4.5h22.5L12 13.065zm0 2.17L.75 6.67v12.83h22.5V6.67L12 15.235z"/>
-      </svg>
-    </a>
-  </div>
-  <p class="copyright" style="text-align: center; color: #ccc; font-size: 0.9rem;">
-    © 2025 CROWNED BY SILENCE. ALL RIGHTS RESERVED.
-  </p>
-</footer>
+  </section>
+
+  <footer>
+    <div style="display: flex; justify-content: center; gap: 2rem; align-items: center; padding: 1rem;">
+      <a href="https://instagram.com/crownedbysilence" target="_blank">
+        <img src="instagram.svg" alt="Instagram" style="width: 24px; height: 24px;">
+      </a>
+      <a href="mailto:contact@crownedbysilence.com">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#fff" viewBox="0 0 24 24">
+          <path d="M12 13.065L.75 4.5h22.5L12 13.065zm0 2.17L.75 6.67v12.83h22.5V6.67L12 15.235z"/>
+        </svg>
+      </a>
+    </div>
+    <p class="copyright">
+      © 2025 CROWNED BY SILENCE. ALL RIGHTS RESERVED.
+    </p>
+  </footer>
 
   <script>
     function toggleMenu() {
       const nav = document.getElementById('nav-links');
       nav.classList.toggle('active');
     }
-  </script>
-</body>
-</html>
 
-  <script>
-    function toggleMenu() {
-      const nav = document.getElementById('nav-links');
-      nav.classList.toggle('active');
-    }
-  </script>
-
-  <script>
     // Disable right-click
     document.addEventListener('contextmenu', event => event.preventDefault());
 
