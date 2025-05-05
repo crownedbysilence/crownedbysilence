@@ -8,11 +8,10 @@
   <style>
     body {
       margin: 0;
-      font-family: 'Helvetica Neue', sans-serif;
+      font-family: 'Alternative Calvin Klein', sans-serif;
       color: #fff;
       background: url('bg.png') no-repeat center center fixed;
       background-size: cover;
-      scroll-behavior: smooth;
     }
 
     nav {
@@ -42,12 +41,79 @@
     .nav-links a {
       color: #ccc;
       text-decoration: none;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
       transition: color 0.2s ease;
     }
 
     .nav-links a:hover {
       color: #fff;
+    }
+
+    header {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 2rem;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+      margin-bottom: 1rem;
+    }
+
+    header p {
+      font-size: 1rem;
+      color: #ccc;
+      margin-top: -1rem;
+    }
+
+    .shop-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    @media (min-width: 768px) {
+      .shop-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    footer {
+      background: transparent;
+      padding: 2rem 1rem;
+      text-align: center;
+      text-shadow: 1px 1px 2px #000;
+    }
+
+    footer a {
+      color: #ccc;
+      text-decoration: none;
+      margin: 0 1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    footer img {
+      width: 18px;
+      height: 18px;
+      object-fit: contain;
+    }
+
+    .copyright {
+      margin-top: 1rem;
+      color: #666;
+      font-size: 0.75rem;
     }
 
     .hamburger {
@@ -84,79 +150,6 @@
         display: flex;
       }
     }
-
-    header {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 0 2rem;
-    }
-
-    header h1 {
-      font-size: 2.8rem;
-      font-weight: bold;
-      letter-spacing: 2px;
-      margin-bottom: 1rem;
-    }
-
-    header p {
-      font-size: 1rem;
-      color: #ccc;
-      margin: 0;
-    }
-
-    .shop-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 2rem;
-      padding: 4rem 2rem;
-      text-align: center;
-    }
-
-    @media (min-width: 768px) {
-      .shop-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-
-    .shop-item {
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      padding: 2rem;
-      border-radius: 6px;
-      background: rgba(0, 0, 0, 0.3);
-      color: #ccc;
-    }
-
-    footer {
-      background: transparent;
-      padding: 2rem 1rem;
-      text-align: center;
-      text-shadow: 1px 1px 2px #000;
-    }
-
-    footer a {
-      color: #ccc;
-      text-decoration: none;
-      margin: 0 1rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    footer img {
-      width: 18px;
-      height: 18px;
-      object-fit: contain;
-    }
-
-    .copyright {
-      margin-top: 1rem;
-      color: #666;
-      font-size: 0.75rem;
-    }
   </style>
 </head>
 <body>
@@ -168,10 +161,10 @@
       <span></span>
     </div>
     <div class="nav-links" id="nav-links">
-      <a href="portfolio.html">portfolio</a>
-      <a href="shop.html">shop</a>
-      <a href="index.html#about">about</a>
-      <a href="index.html#contact">contact</a>
+      <a href="portfolio.html">PORTFOLIO</a>
+      <a href="shop.html">SHOP</a>
+      <a href="index.html#about">ABOUT</a>
+      <a href="index.html#contact">CONTACT</a>
     </div>
   </nav>
 
@@ -181,9 +174,9 @@
   </header>
 
   <section class="shop-grid">
-    <div class="shop-item">Shop Item 1</div>
-    <div class="shop-item">Shop Item 2</div>
-    <div class="shop-item">Shop Item 3</div>
+    <p>SHOP ITEM 1</p>
+    <p>SHOP ITEM 2</p>
+    <p>SHOP ITEM 3</p>
   </section>
 
   <footer>
@@ -197,7 +190,9 @@
         </svg>
       </a>
     </div>
-    <p class="copyright">© 2025 CROWNED BY SILENCE. ALL RIGHTS RESERVED.</p>
+    <p class="copyright">
+      © 2025 CROWNED BY SILENCE. ALL RIGHTS RESERVED.
+    </p>
   </footer>
 
   <script>
