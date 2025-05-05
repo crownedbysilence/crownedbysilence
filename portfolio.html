@@ -3,27 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Portfolio — CROWNED BY SILENCE</title>
+  <title>PORTFOLIO — CROWNED BY SILENCE</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    /* Reset and base styles */
-    * {
+    body {
       margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body, html {
-      width: 100%;
-      height: 100%;
       font-family: 'Helvetica Neue', sans-serif;
+      color: #fff;
       background: url('bg.png') no-repeat center center fixed;
       background-size: cover;
-      color: #fff;
-      scroll-behavior: smooth;
     }
 
-    /* Navigation styles */
     nav {
       position: fixed;
       top: 0;
@@ -57,6 +47,68 @@
 
     .nav-links a:hover {
       color: #fff;
+    }
+
+    header {
+      padding-top: 100px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+      margin: 2rem 0;
+    }
+
+    .portfolio {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      padding: 4rem 2rem;
+    }
+
+    @media (min-width: 768px) {
+      .portfolio {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .portfolio img {
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+      user-select: none;
+      -webkit-user-drag: none;
+      pointer-events: none;
+    }
+
+    footer {
+      background: transparent;
+      padding: 2rem 1rem;
+      text-align: center;
+      text-shadow: 1px 1px 2px #000;
+    }
+
+    footer a {
+      color: #ccc;
+      text-decoration: none;
+      margin: 0 1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    footer img {
+      width: 18px;
+      height: 18px;
+      object-fit: contain;
+    }
+
+    .copyright {
+      margin-top: 1rem;
+      color: #666;
+      font-size: 0.75rem;
     }
 
     .hamburger {
@@ -93,76 +145,6 @@
         display: flex;
       }
     }
-
-    /* Header styles */
-    header {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 0 2rem;
-    }
-
-    header h1 {
-      font-size: 3rem;
-      font-weight: bold;
-      letter-spacing: 2px;
-    }
-
-    /* Portfolio grid styles */
-    .portfolio {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 2rem;
-      padding: 4rem 2rem;
-    }
-
-    @media (min-width: 768px) {
-      .portfolio {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-
-    .portfolio img {
-      width: 100%;
-      height: 400px;
-      object-fit: cover;
-      pointer-events: none;
-      user-select: none;
-      -webkit-user-drag: none;
-      border-radius: 4px;
-    }
-
-    /* Footer styles */
-    footer {
-      background: transparent;
-      padding: 2rem 1rem;
-      text-align: center;
-      text-shadow: 1px 1px 2px #000;
-    }
-
-    footer a {
-      color: #ccc;
-      text-decoration: none;
-      margin: 0 1rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    footer img {
-      width: 18px;
-      height: 18px;
-      object-fit: contain;
-    }
-
-    .copyright {
-      margin-top: 1rem;
-      color: #666;
-      font-size: 0.75rem;
-    }
   </style>
 </head>
 <body>
@@ -174,9 +156,8 @@
       <span></span>
     </div>
     <div class="nav-links" id="nav-links">
-      <a href="index.html">home</a>
       <a href="portfolio.html">portfolio</a>
-      <a href="index.html#shop">shop</a>
+      <a href="shop.html">shop</a>
       <a href="index.html#about">about</a>
       <a href="index.html#contact">contact</a>
     </div>
@@ -186,7 +167,7 @@
     <h1>PORTFOLIO</h1>
   </header>
 
-  <section id="full-portfolio" class="portfolio">
+  <section class="portfolio">
     <img src="portfolio1.jpg" alt="Portfolio Image 1" draggable="false" />
     <img src="portfolio2.jpg" alt="Portfolio Image 2" draggable="false" />
     <img src="portfolio3.jpg" alt="Portfolio Image 3" draggable="false" />
@@ -195,7 +176,7 @@
   <footer>
     <div style="display: flex; justify-content: center; gap: 2rem; align-items: center; padding: 1rem;">
       <a href="https://instagram.com/crownedbysilence" target="_blank">
-        <img src="instagram.svg" alt="Instagram">
+        <img src="instagram.svg" alt="Instagram" style="width: 24px; height: 24px;">
       </a>
       <a href="mailto:contact@crownedbysilence.com">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#fff" viewBox="0 0 24 24">
