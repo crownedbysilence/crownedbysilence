@@ -1,4 +1,4 @@
-
+<!-- START OF index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -241,6 +241,11 @@
     <h2>CONTACT</h2>
   </section>
 
+  <section id="shop" style="padding-bottom: 6rem;">
+    <h2><a href="shop.html" style="color: #fff; text-decoration: none;">VISIT THE SHOP</a></h2>
+    <p style="color: #ccc;">EXCLUSIVE PRINTS — COMING SOON</p>
+  </section>
+
   <footer>
     <div style="display: flex; justify-content: center; gap: 2rem; align-items: center; padding: 1rem;">
       <a href="https://instagram.com/crownedbysilence" target="_blank">
@@ -263,17 +268,13 @@
       nav.classList.toggle('active');
     }
 
-    // Disable right-click
     document.addEventListener('contextmenu', event => event.preventDefault());
-
-    // Disable drag of images
     document.querySelectorAll('img').forEach(img => {
       img.setAttribute('draggable', 'false');
       img.addEventListener('dragstart', e => e.preventDefault());
     });
-
-    // Disable text selection
     document.addEventListener('selectstart', e => e.preventDefault());
   </script>
 </body>
 </html>
+<!-- END OF index.html -->
