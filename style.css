@@ -90,23 +90,3 @@ body {
   color: #000;
 }
 
-.button-wrapper {
-  display: flex;
-  justify-content: center;
-  margin-top: 2rem;
-}
-
-.view-all-button {
-  background: transparent;
-  color: white;
-  border: 1px solid white;
-  padding: 0.7rem 2rem;
-  text-decoration: none;
-  font-size: 0.9rem;
-  transition: background 0.3s ease;
-}
-
-.view-all-button:hover {
-  background: white;
-  color: black;
-}
