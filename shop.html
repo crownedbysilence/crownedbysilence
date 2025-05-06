@@ -1,1 +1,205 @@
-<!DOCTYPE html><html><head><title>Shop</title></head><body>Shop Page</body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SHOP — CROWNED BY SILENCE</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Alternative Calvin Klein', sans-serif;
+      color: #fff;
+      background: url('bg.png') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      color: #ccc;
+      text-decoration: none;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: #fff;
+    }
+
+    header {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 2rem;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+      margin-bottom: 1rem;
+    }
+
+    header p {
+      font-size: 1rem;
+      color: #ccc;
+      margin-top: -1rem;
+    }
+
+    .shop-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    @media (min-width: 768px) {
+      .shop-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    footer {
+      background: transparent;
+      padding: 2rem 1rem;
+      text-align: center;
+      text-shadow: 1px 1px 2px #000;
+    }
+
+    footer a {
+      color: #ccc;
+      text-decoration: none;
+      margin: 0 1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    footer img {
+      width: 18px;
+      height: 18px;
+      object-fit: contain;
+    }
+
+    .copyright {
+      margin-top: 1rem;
+      color: #666;
+      font-size: 0.75rem;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .hamburger span {
+      height: 2px;
+      width: 25px;
+      background: #ccc;
+      margin: 4px 0;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #111;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        text-align: right;
+        padding: 1rem;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="logo">CROWNED BY SILENCE</a>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="nav-links" id="nav-links">
+      <a href="portfolio.html">PORTFOLIO</a>
+      <a href="shop.html">SHOP</a>
+      <a href="index.html#about">ABOUT</a>
+      <a href="index.html#contact">CONTACT</a>
+    </div>
+  </nav>
+
+  <header>
+    <h1>SHOP</h1>
+    <p>EXCLUSIVE PRINTS — COMING SOON</p>
+  </header>
+
+  <section class="shop-grid">
+    <p>SHOP ITEM 1</p>
+    <p>SHOP ITEM 2</p>
+    <p>SHOP ITEM 3</p>
+  </section>
+
+  <footer>
+    <div style="display: flex; justify-content: center; gap: 2rem; align-items: center; padding: 1rem;">
+      <a href="https://instagram.com/crownedbysilence" target="_blank">
+        <img src="instagram.svg" alt="Instagram">
+      </a>
+      <a href="mailto:contact@crownedbysilence.com">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#fff" viewBox="0 0 24 24">
+          <path d="M12 13.065L.75 4.5h22.5L12 13.065zm0 2.17L.75 6.67v12.83h22.5V6.67L12 15.235z"/>
+        </svg>
+      </a>
+    </div>
+    <p class="copyright">
+      © 2025 CROWNED BY SILENCE. ALL RIGHTS RESERVED.
+    </p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('nav-links');
+      nav.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
