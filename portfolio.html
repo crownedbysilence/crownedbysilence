@@ -11,13 +11,15 @@
       color: #fff;
       background: url('bg.png') no-repeat center center fixed;
       background-size: cover;
+      user-select: none;
+      -webkit-user-drag: none;
     }
 
     nav {
       position: fixed;
       top: 0;
       width: 100%;
-      background: rgba(0, 0, 0, 0.85);
+      background: rgba(0, 0, 0, 0.8);
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -36,10 +38,9 @@
 
     .nav-links {
       display: flex;
+      gap: 2rem;
       flex-wrap: wrap;
-      gap: 1.5rem;
       justify-content: flex-end;
-      align-items: center;
     }
 
     .nav-links a {
@@ -63,6 +64,7 @@
       align-items: center;
       text-align: center;
       padding: 0 2rem;
+      background: rgba(0, 0, 0, 0.45);
     }
 
     header h1 {
@@ -83,21 +85,16 @@
       margin-bottom: 1.5rem;
       break-inside: avoid;
       display: block;
+      opacity: 0.85;
+      border-radius: 4px;
+      pointer-events: none;
+      user-select: none;
+      -webkit-user-drag: none;
       transition: opacity 0.3s ease;
-      opacity: 0.9;
-      border-radius: 6px;
     }
 
     .masonry img:hover {
       opacity: 1;
-    }
-
-    .masonry p {
-      color: #ccc;
-      font-size: 0.8rem;
-      text-align: center;
-      margin-top: -1rem;
-      margin-bottom: 2rem;
     }
 
     footer {
@@ -158,12 +155,11 @@
   </header>
 
   <section class="masonry">
-    <img src="portfolio1.jpg" alt="Portfolio Image 1" loading="lazy">
-    <img src="portfolio2.jpg" alt="Portfolio Image 2" loading="lazy">
-    <img src="portfolio3.jpg" alt="Portfolio Image 3" loading="lazy">
-    <img src="portfolio4.jpg" alt="Portfolio Image 4" loading="lazy">
-    <p>Image 5</p>
-    <p>Image 6</p>
+    <img src="portfolio1.jpg" alt="Portfolio Image 1" loading="lazy" />
+    <img src="portfolio2.jpg" alt="Portfolio Image 2" loading="lazy" />
+    <img src="portfolio3.jpg" alt="Portfolio Image 3" loading="lazy" />
+    <img src="portfolio4.jpg" alt="Portfolio Image 4" loading="lazy" />
+    <!-- Add more images as needed -->
   </section>
 
   <footer>
