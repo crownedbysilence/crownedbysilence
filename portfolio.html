@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>PORTFOLIO — CROWNED BY SILENCE</title>
+  <link rel="stylesheet" href="style.css" />
   <style>
     body {
       margin: 0;
@@ -35,7 +36,6 @@
     .nav-links {
       display: flex;
       gap: 2rem;
-      flex-wrap: wrap;
     }
 
     .nav-links a {
@@ -45,7 +45,6 @@
       letter-spacing: 1px;
       text-transform: uppercase;
       transition: color 0.2s ease;
-      white-space: nowrap;
     }
 
     .nav-links a:hover {
@@ -60,7 +59,6 @@
       align-items: center;
       text-align: center;
       padding: 0 2rem;
-      background: rgba(0, 0, 0, 0.5);
     }
 
     header h1 {
@@ -70,36 +68,26 @@
       margin-bottom: 1rem;
     }
 
-    .masonry-grid {
-      column-count: 1;
-      column-gap: 1.5rem;
+    .portfolio {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
       padding: 4rem 2rem;
     }
 
     @media (min-width: 768px) {
-      .masonry-grid {
-        column-count: 2;
+      .portfolio {
+        grid-template-columns: repeat(3, 1fr);
       }
     }
 
-    @media (min-width: 1024px) {
-      .masonry-grid {
-        column-count: 3;
-      }
-    }
-
-    .masonry-grid img {
+    .portfolio img {
       width: 100%;
       height: auto;
-      margin-bottom: 1.5rem;
       border-radius: 4px;
-      display: block;
-      transition: opacity 0.3s ease;
-      opacity: 0.92;
-    }
-
-    .masonry-grid img:hover {
-      opacity: 1;
+      pointer-events: none;
+      user-select: none;
+      -webkit-user-drag: none;
     }
 
     footer {
@@ -170,7 +158,9 @@
   <nav>
     <a href="index.html" class="logo">CROWNED BY SILENCE</a>
     <div class="hamburger" onclick="toggleMenu()">
-      <span></span><span></span><span></span>
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
     <div class="nav-links" id="nav-links">
       <a href="portfolio.html">PORTFOLIO</a>
@@ -184,13 +174,10 @@
     <h1>PORTFOLIO</h1>
   </header>
 
-  <section class="masonry-grid">
-    <img src="portfolio1.jpg" alt="Portfolio Image 1" loading="lazy" />
-    <img src="portfolio2.jpg" alt="Portfolio Image 2" loading="lazy" />
-    <img src="portfolio3.jpg" alt="Portfolio Image 3" loading="lazy" />
-    <img src="portfolio4.jpg" alt="Portfolio Image 4" loading="lazy" />
-    <img src="portfolio5.jpg" alt="Portfolio Image 5" loading="lazy" />
-    <img src="portfolio6.jpg" alt="Portfolio Image 6" loading="lazy" />
+  <section class="portfolio">
+    <img src="portfolio1.jpg" alt="Portfolio Image 1" draggable="false" />
+    <img src="portfolio2.jpg" alt="Portfolio Image 2" draggable="false" />
+    <img src="portfolio3.jpg" alt="Portfolio Image 3" draggable="false" />
   </section>
 
   <footer>
