@@ -1,102 +1,51 @@
+/* GLOBAL RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body, html {
-  width: 100%;
-  height: 100%;
-  font-family: 'Alternative Calvin Klein', sans-serif;
-  background: url('bg.png') no-repeat center center fixed;
-  background-size: cover;
-  color: #fff;
-}
-
-header {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  background: rgba(0, 0, 0, 0.5); /* Optional overlay */
-}
-
-header h1 {
-  font-size: 3rem;
-  letter-spacing: 2px;
-}
-
-header p {
-  margin-top: 1rem;
-  font-size: 1.2rem;
-  color: #ccc;
-}
-
-footer {
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
-  background: #111;
-}
-
-footer a {
-  color: #ccc;
-  text-decoration: none;
-}
-
-@media (max-width: 768px) {
-  body, html {
-    background-position: 75% center;
-  }
-
-  header h1 {
-    font-size: 2rem;
-  }
-
-  header p {
-    font-size: 1rem;
-  }
-}
-
 body {
-  background-position: 75% center !important;
+  background-color: black;
+  color: white;
+  font-family: 'Alternative Calvin Klein', sans-serif;
 }
 
-@media (max-width: 768px) {
-  header p {
-    white-space: nowrap;
-    font-size: 0.85rem;
-  }
+/* NAVIGATION */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem 0;
+  background-color: black;
+  text-transform: uppercase;
 }
 
-
-
-
-.view-all-button {
-  display: inline-block;
-  padding: 0.8rem 1.6rem;
-  background: none;
-  color: #fff;
-  border: 2px solid #fff;
+nav a {
+  color: white;
   text-decoration: none;
-  font-size: 1rem;
-  margin: auto;
-  transition: background 0.3s, color 0.3s;
+  font-weight: bold;
+  font-size: 0.9rem;
 }
 
-.view-all-button:hover {
-  background: #fff;
-  color: #000;
+/* HEADER */
+header h1 {
+  text-align: center;
+  font-size: 2rem;
+  padding: 2rem 0;
+  letter-spacing: 0.1em;
 }
 
+/* MASONRY GRID */
 .masonry-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-auto-rows: 10px;
+  grid-auto-rows: auto;
   grid-auto-flow: dense;
   gap: 1rem;
-  padding: 4rem 2rem;
+  padding: 2rem;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 .masonry-grid img {
@@ -106,3 +55,25 @@ body {
   display: block;
 }
 
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 3rem 1rem 2rem;
+  font-size: 0.8rem;
+  color: white;
+}
+
+footer .icons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+footer img,
+footer svg {
+  width: 24px;
+  height: 24px;
+  fill: white;
+}
