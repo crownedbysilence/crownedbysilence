@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>PORTFOLIO — CROWNED BY SILENCE</title>
+  <link rel="stylesheet" href="style.css" />
   <style>
     body {
       margin: 0;
@@ -11,6 +12,7 @@
       color: #fff;
       background: url('bg.png') no-repeat center center fixed;
       background-size: cover;
+      scroll-behavior: smooth;
       user-select: none;
       -webkit-user-drag: none;
     }
@@ -91,13 +93,13 @@
 
     header {
       height: 100vh;
+      background: rgba(0, 0, 0, 0.45);
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
       padding: 0 2rem;
-      background: rgba(0, 0, 0, 0.45);
     }
 
     header h1 {
@@ -120,10 +122,10 @@
       display: block;
       opacity: 0.85;
       border-radius: 4px;
+      transition: opacity 0.3s ease;
       pointer-events: none;
       user-select: none;
       -webkit-user-drag: none;
-      transition: opacity 0.3s ease;
     }
 
     .masonry img:hover {
@@ -191,7 +193,7 @@
     <img src="portfolio2.jpg" alt="Portfolio Image 2" loading="lazy" />
     <img src="portfolio3.jpg" alt="Portfolio Image 3" loading="lazy" />
     <img src="portfolio4.jpg" alt="Portfolio Image 4" loading="lazy" />
-    <!-- Add more as needed -->
+    <!-- Add more images as needed -->
   </section>
 
   <footer>
