@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>INVITE ONLY — CROWNED BY SILENCE</title>
+  <title>PRIVATE — CROWNED BY SILENCE</title>
   <link rel="stylesheet" href="style.css" />
   <style>
     body {
@@ -93,59 +93,82 @@
     }
 
     header {
-      min-height: 100vh;
+      height: 100vh;
       background: rgba(0, 0, 0, 0.45);
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: 2rem;
       text-align: center;
+      padding: 0 2rem;
     }
 
     header h1 {
-      font-size: 2.4rem;
-      letter-spacing: 2px;
-      margin-bottom: 2rem;
-    }
-
-    form {
-      background: rgba(255, 255, 255, 0.05);
-      padding: 2rem;
-      border-radius: 6px;
-      backdrop-filter: blur(8px);
-    }
-
-    input[type="password"] {
-      padding: 0.8rem 1rem;
-      font-size: 1rem;
-      border: none;
-      border-radius: 4px;
-      margin-bottom: 1rem;
-      width: 100%;
-      background: #111;
-      color: #fff;
-    }
-
-    button {
-      padding: 0.8rem 2rem;
-      background: #fff;
-      color: #000;
+      font-size: 2.8rem;
       font-weight: bold;
-      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 1rem;
+    }
+
+    .invite-wrapper {
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+
+    .invite-wrapper input {
+      padding: 0.75rem 1rem;
       border: none;
+      font-size: 1rem;
+      margin-right: 1rem;
+      border-radius: 4px;
+    }
+
+    .invite-wrapper button {
+      padding: 0.75rem 1.25rem;
+      font-size: 1rem;
+      background-color: #000;
+      color: #fff;
+      border: 1px solid #fff;
       border-radius: 4px;
       cursor: pointer;
     }
 
-    #content {
+    .content {
       display: none;
-      padding: 4rem 2rem;
       text-align: center;
+      font-size: 1.25rem;
+      padding: 4rem 2rem;
+    }
+
+    footer {
+      background: transparent;
+      padding: 2rem 1rem;
+      text-align: center;
+      text-shadow: 1px 1px 2px #000;
+    }
+
+    footer a {
+      color: #ccc;
+      text-decoration: none;
+      margin: 0 1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    footer img {
+      width: 18px;
+      height: 18px;
+      object-fit: contain;
+    }
+
+    .copyright {
+      margin-top: 1rem;
+      color: #666;
+      font-size: 0.75rem;
     }
   </style>
 </head>
-<body>
+<body oncontextmenu="return false">
 
   <nav>
     <a href="index.html" class="logo">CROWNED BY SILENCE</a>
@@ -163,22 +186,23 @@
   </nav>
 
   <header>
-    <h1>PRIVATE ACCESS</h1>
-    <form onsubmit="return checkCode(event)">
-      <input type="password" id="invite-code" placeholder="Enter Invite Code" required />
-      <button type="submit">Enter</button>
-    </form>
+    <h1>PRIVATE</h1>
   </header>
 
-  <section id="content">
-    <h2>Welcome, invited guest.</h2>
-    <p>This content is private and only available to invited viewers.</p>
-  </section>
+  <div class="invite-wrapper">
+    <p>ENTER INVITE CODE TO ACCESS</p>
+    <input type="password" id="inviteCode" placeholder="Invite Code" />
+    <button onclick="checkCode()">Enter</button>
+  </div>
+
+  <div class="content" id="privateContent">
+    <p>Welcome to the private page. You are invited.</p>
+  </div>
 
   <footer>
     <div style="display: flex; justify-content: center; gap: 2rem; align-items: center; padding: 1rem;">
       <a href="https://instagram.com/crownedbysilence" target="_blank">
-        <img src="instagram.svg" alt="Instagram" style="width: 18px; height: 18px;">
+        <img src="instagram.svg" alt="Instagram">
       </a>
       <a href="mailto:contact@crownedbysilence.com">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#fff" viewBox="0 0 24 24">
@@ -197,14 +221,14 @@
       nav.classList.toggle('active');
     }
 
-    function checkCode(event) {
-      event.preventDefault();
-      const code = document.getElementById('invite-code').value;
-      if (code === 'SILENCE2025') {
-        document.querySelector('form').style.display = 'none';
-        document.getElementById('content').style.display = 'block';
+    function checkCode() {
+      const entered = document.getElementById('inviteCode').value;
+      const allowed = "crowned"; // Set your invite code here
+      if (entered === allowed) {
+        document.querySelector('.invite-wrapper').style.display = "none";
+        document.getElementById('privateContent').style.display = "block";
       } else {
-        alert('Invalid invite code.');
+        alert("Invalid code.");
       }
     }
   </script>
