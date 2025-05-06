@@ -10,7 +10,7 @@ body, html {
   font-family: 'Alternative Calvin Klein', sans-serif;
   background: url('bg.png') no-repeat center center fixed;
   background-size: cover;
-  color: #fff;
+  color: #ffffff;
 }
 
 header {
@@ -19,18 +19,20 @@ header {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: rgba(0, 0, 0, 0.5); /* Optional overlay */
+  background: rgba(0, 0, 0, 0.5);
 }
 
 header h1 {
   font-size: 3rem;
   letter-spacing: 2px;
+  font-weight: normal;
 }
 
 header p {
   margin-top: 1rem;
   font-size: 1.2rem;
-  color: #ccc;
+  color: #ffffff;
+  font-weight: normal;
 }
 
 footer {
@@ -38,10 +40,11 @@ footer {
   padding: 1rem;
   font-size: 0.9rem;
   background: #111;
+  color: #ffffff;
 }
 
 footer a {
-  color: #ccc;
+  color: #ffffff;
   text-decoration: none;
 }
 
@@ -56,6 +59,7 @@ footer a {
 
   header p {
     font-size: 1rem;
+    white-space: nowrap;
   }
 }
 
@@ -63,29 +67,21 @@ body {
   background-position: 75% center !important;
 }
 
-@media (max-width: 768px) {
-  header p {
-    white-space: nowrap;
-    font-size: 0.85rem;
-  }
-}
-
-
-
-
 .view-all-button {
   display: inline-block;
   padding: 0.8rem 1.6rem;
   background: none;
-  color: #fff;
-  border: 2px solid #fff;
+  color: #ffffff;
+  border: 2px solid #ffffff;
   text-decoration: none;
   font-size: 1rem;
   margin: auto;
   transition: background 0.3s, color 0.3s;
+  font-weight: normal;
+  font-family: 'Alternative Calvin Klein', sans-serif;
 }
 
 .view-all-button:hover {
-  background: #fff;
-  color: #000;
+  background: #ffffff;
+  color: #000000;
 }
