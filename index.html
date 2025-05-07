@@ -125,7 +125,30 @@
       background: transparent;
       padding: 2rem 1rem;
     }
-  </style>
+  
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #111;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    text-align: right;
+    padding: 1rem;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+</style>
 </head>
 <body>
 
