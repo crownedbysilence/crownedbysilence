@@ -7,13 +7,11 @@
   <style>
     body {
       margin: 0;
-      background: #000 url('bg.png') no-repeat center center fixed;
-      background-size: cover;
       font-family: 'Alternative Calvin Klein', sans-serif;
-      color: white;
-      user-select: none;
-      -webkit-user-drag: none;
+      background: #000;
+      color: #fff;
     }
+
     nav {
       position: fixed;
       top: 0;
@@ -25,89 +23,84 @@
       padding: 1rem 2rem;
       z-index: 1000;
     }
+
     .logo {
       font-weight: normal;
       letter-spacing: 2px;
       text-decoration: none;
-      color: white;
+      color: #ffffff;
       font-size: 0.9rem;
     }
+
     .nav-links {
       display: flex;
       gap: 2rem;
     }
+
     .nav-links a {
       color: #ccc;
       text-decoration: none;
       font-size: 0.9rem;
       letter-spacing: 1px;
       text-transform: uppercase;
-      transition: color 0.2s ease;
     }
-    .nav-links a:hover {
-      color: white;
-    }
+
     header {
       height: 100vh;
-      background: rgba(0, 0, 0, 0.45);
+      background: rgba(0, 0, 0, 0.4);
       display: flex;
       justify-content: center;
       align-items: center;
-      text-align: center;
     }
+
     header h1 {
       font-size: 2.8rem;
       letter-spacing: 2px;
-      font-weight: normal;
+      margin: 0;
     }
+
     .row {
       display: flex;
-      gap: 2px;
-      padding: 2px;
+      width: 100%;
     }
+
     .row img {
-      height: 600px;
+      height: 300px;
       width: auto;
-      object-fit: cover;
+      object-fit: contain;
       display: block;
-      user-select: none;
-      -webkit-user-drag: none;
+      margin: 0;
     }
-    @media (max-width: 768px) {
-      .row {
-        flex-direction: column;
-      }
-      .row img {
-        width: 100%;
-        height: auto;
-      }
-    }
+
     footer {
       background: transparent;
       padding: 2rem 1rem;
       text-align: center;
     }
+
     footer a {
-      color: white;
+      color: #ffffff;
       text-decoration: none;
       margin: 0 1rem;
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
     }
+
     footer img {
       width: 18px;
       height: 18px;
       object-fit: contain;
     }
+
     .copyright {
       margin-top: 1rem;
-      color: white;
+      color: #ffffff;
       font-size: 0.75rem;
     }
   </style>
 </head>
-<body oncontextmenu="return false;" onmousedown="return false;" onselectstart="return false;">
+<body>
 
   <nav>
     <a href="index.html" class="logo">CROWNED BY SILENCE</a>
@@ -123,27 +116,28 @@
     <h1>PORTFOLIO</h1>
   </header>
 
-  <main style="margin-top: 6rem;">
-    <div class="row">
-      <img src="portfolio1.jpg" alt="portfolio1" />
-      <img src="portfolio2.jpg" alt="portfolio2" />
-    </div>
-    <div class="row">
-      <img src="portfolio3.jpg" alt="portfolio3" />
-      <img src="portfolio4.jpg" alt="portfolio4" />
-    </div>
-    <div class="row">
-      <img src="portfolio5.jpg" alt="portfolio5" />
-      <img src="portfolio6.jpg" alt="portfolio6" />
-    </div>
-    <div class="row">
-      <img src="portfolio7.jpg" alt="portfolio7" />
-      <img src="portfolio8.jpg" alt="portfolio8" />
-    </div>
-  </main>
+  <!-- ROW 1 -->
+  <div class="row">
+    <img src="portfolio1.jpg" alt="portfolio1" loading="lazy" />
+    <img src="portfolio2.jpg" alt="portfolio2" loading="lazy" />
+  </div>
+
+  <!-- ROW 2 -->
+  <div class="row">
+    <img src="portfolio3.jpg" alt="portfolio3" loading="lazy" />
+    <img src="portfolio4.jpg" alt="portfolio4" loading="lazy" />
+  </div>
+
+  <!-- ROW 3 -->
+  <div class="row">
+    <img src="portfolio5.jpg" alt="portfolio5" loading="lazy" />
+    <img src="portfolio6.jpg" alt="portfolio6" loading="lazy" />
+  </div>
+
+  <!-- Add more rows below in same pattern -->
 
   <footer>
-    <div style="display: flex; justify-content: center; gap: 2rem; align-items: center; padding: 1rem;">
+    <div style="display: flex; justify-content: center; gap: 2rem;">
       <a href="https://instagram.com/crownedbysilence" target="_blank">
         <img src="instagram.svg" alt="Instagram">
       </a>
@@ -153,9 +147,7 @@
         </svg>
       </a>
     </div>
-    <p class="copyright">
-      © 2025 CROWNED BY SILENCE. ALL RIGHTS RESERVED.
-    </p>
+    <p class="copyright">© 2025 CROWNED BY SILENCE. ALL RIGHTS RESERVED.</p>
   </footer>
 
 </body>
