@@ -1,9 +1,12 @@
 body {
   margin: 0;
-  font-family: 'Alternative Calvin Klein', sans-serif;
-  color: #ffffff;
   background: url('bg.png') no-repeat center center fixed;
   background-size: cover;
+  font-family: 'Alternative Calvin Klein', sans-serif;
+  color: white;
+  scroll-behavior: smooth;
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
 nav {
@@ -18,67 +21,18 @@ nav {
   z-index: 1000;
 }
 
-.logo {
+.logo, .nav-links a {
   font-size: 0.9rem;
   font-weight: normal;
   letter-spacing: 2px;
   color: #ffffff;
   text-decoration: none;
-  font-family: 'Alternative Calvin Klein', sans-serif;
+  text-transform: uppercase;
 }
 
 .nav-links {
   display: flex;
   gap: 2rem;
-}
-
-.nav-links a {
-  font-size: 0.9rem;
-  font-weight: normal;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: #ccc;
-  text-decoration: none;
-  font-family: 'Alternative Calvin Klein', sans-serif;
-}
-
-.nav-links a:hover {
-  color: #ffffff;
-}
-
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-}
-
-.hamburger span {
-  height: 2px;
-  width: 25px;
-  background: #ffffff;
-  margin: 4px 0;
-}
-
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background: #111;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    width: 100%;
-    text-align: right;
-    padding: 1rem;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .hamburger {
-    display: flex;
-  }
 }
 
 header {
@@ -93,41 +47,35 @@ header {
 header h1 {
   font-size: 2.8rem;
   letter-spacing: 2px;
-  font-weight: normal;
 }
 
-.fluid-gallery {
+.gallery {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 1px;
-  padding: 4rem 1px 2rem;
+  padding: 0;
 }
 
-.fluid-gallery img {
-  height: 300px;
+.gallery img {
+  height: 400px;
   object-fit: cover;
   display: block;
   flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: auto;
-  pointer-events: none;
-  user-select: none;
-  -webkit-user-drag: none;
+  flex-basis: 0;
 }
 
 footer {
+  background: transparent;
   padding: 2rem 1rem;
   text-align: center;
+  text-shadow: 1px 1px 2px #000;
 }
 
 footer a {
-  color: #ffffff;
-  text-decoration: none;
+  color: white;
   margin: 0 1rem;
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
 }
 
 footer img {
@@ -136,8 +84,7 @@ footer img {
   object-fit: contain;
 }
 
-copyright {
-  color: #ffffff;
+footer p {
   font-size: 0.75rem;
   margin-top: 1rem;
 }
