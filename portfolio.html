@@ -110,27 +110,25 @@
       margin-bottom: 1rem;
     }
 
-    .masonry {
-      column-count: 3;
-      column-gap: 1.5rem;
-      padding: 4rem 2rem 2rem;
+    .art-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2px;
+      padding: 4rem 2px 2rem;
     }
 
-    .masonry img {
+    .art-grid img {
       width: 100%;
-      margin-bottom: 1.5rem;
-      break-inside: avoid;
+      height: auto;
       display: block;
-      opacity: 0.85;
-      border-radius: 4px;
       pointer-events: none;
       user-select: none;
       -webkit-user-drag: none;
     }
 
     @media (max-width: 768px) {
-      .masonry {
-        column-count: 1;
+      .art-grid {
+        grid-template-columns: 1fr;
       }
     }
 
@@ -166,17 +164,17 @@
 <body oncontextmenu="return false;" onmousedown="return false;" onselectstart="return false;">
 
   <nav>
-    <a href="index.html" class="logo" style="font-size: 0.9rem; font-weight: normal; letter-spacing: 2px; color: #ffffff; text-decoration: none; font-family: 'Alternative Calvin Klein', sans-serif;">CROWNED BY SILENCE</a>
+    <a href="index.html" class="logo">CROWNED BY SILENCE</a>
     <div class="hamburger" onclick="toggleMenu()">
       <span></span>
       <span></span>
       <span></span>
     </div>
     <div class="nav-links" id="nav-links">
-      <a href="portfolio.html" style="font-size: 0.9rem; font-weight: normal; letter-spacing: 1px; text-transform: uppercase; color: #ccc; text-decoration: none; font-family: 'Alternative Calvin Klein', sans-serif;">PORTFOLIO</a>
-      <a href="shop.html" style="font-size: 0.9rem; font-weight: normal; letter-spacing: 1px; text-transform: uppercase; color: #ccc; text-decoration: none; font-family: 'Alternative Calvin Klein', sans-serif;">SHOP</a>
-      <a href="index.html#about" style="font-size: 0.9rem; font-weight: normal; letter-spacing: 1px; text-transform: uppercase; color: #ccc; text-decoration: none; font-family: 'Alternative Calvin Klein', sans-serif;">ABOUT</a>
-      <a href="index.html#contact" style="font-size: 0.9rem; font-weight: normal; letter-spacing: 1px; text-transform: uppercase; color: #ccc; text-decoration: none; font-family: 'Alternative Calvin Klein', sans-serif;">CONTACT</a>
+      <a href="portfolio.html">PORTFOLIO</a>
+      <a href="shop.html">SHOP</a>
+      <a href="index.html#about">ABOUT</a>
+      <a href="index.html#contact">CONTACT</a>
     </div>
   </nav>
 
@@ -189,41 +187,10 @@
     <img src="portfolio2.jpg" alt="portfolio2" />
     <img src="portfolio3.jpg" alt="portfolio3" />
     <img src="portfolio4.jpg" alt="portfolio4" />
-</section>
-
-<style>
-.art-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  padding: 4rem 2rem;
-}
-
-.art-grid img {
-  width: 100%;
-  height: 500px;
-  object-fit: contain;
-  display: block;
-  border-radius: 4px;
-  pointer-events: none;
-  user-select: none;
-  -webkit-user-drag: none;
-}
-
-@media (max-width: 768px) {
-  .art-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .art-grid img {
-    height: auto;
-  }
-}
-</style>
-    <img src="portfolio1.jpg" alt="Portfolio Image 1" loading="lazy" />
-    <img src="portfolio2.jpg" alt="Portfolio Image 2" loading="lazy" />
-    <img src="portfolio3.jpg" alt="Portfolio Image 3" loading="lazy" />
-    <img src="portfolio4.jpg" alt="Portfolio Image 4" loading="lazy" />
+    <img src="portfolio5.jpg" alt="portfolio5" />
+    <img src="portfolio6.jpg" alt="portfolio6" />
+    <img src="portfolio7.jpg" alt="portfolio7" />
+    <img src="portfolio8.jpg" alt="portfolio8" />
   </section>
 
   <footer>
