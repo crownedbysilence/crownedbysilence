@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>PORTFOLIO — CROWNED BY SILENCE</title>
-  <link rel="stylesheet" href="style.css" />
   <style>
     body {
       margin: 0;
@@ -110,16 +109,15 @@
       margin-bottom: 1rem;
     }
 
-    .flex-gallery {
+    .gallery-row {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2px;
-      padding: 4rem 2px;
+      gap: 1px;
+      margin-bottom: 1px;
     }
 
-    .flex-gallery img {
+    .gallery-row img {
       height: 300px;
+      width: auto;
       object-fit: cover;
       display: block;
       pointer-events: none;
@@ -127,21 +125,13 @@
       -webkit-user-drag: none;
     }
 
-    .flex-gallery img.portrait {
-      flex: 1 1 30%;
-    }
-
-    .flex-gallery img.square {
-      flex: 1 1 65%;
-    }
-
     @media (max-width: 768px) {
-      .flex-gallery {
+      .gallery-row {
         flex-direction: column;
       }
 
-      .flex-gallery img {
-        width: 100% !important;
+      .gallery-row img {
+        width: 100%;
         height: auto;
       }
     }
@@ -180,7 +170,9 @@
   <nav>
     <a href="index.html" class="logo">CROWNED BY SILENCE</a>
     <div class="hamburger" onclick="toggleMenu()">
-      <span></span><span></span><span></span>
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
     <div class="nav-links" id="nav-links">
       <a href="portfolio.html">PORTFOLIO</a>
@@ -194,13 +186,18 @@
     <h1>PORTFOLIO</h1>
   </header>
 
-  <section class="flex-gallery">
-    <img src="portfolio1.jpg" alt="portfolio1" class="portrait" />
-    <img src="portfolio2.jpg" alt="portfolio2" class="square" />
-    <img src="portfolio3.jpg" alt="portfolio3" class="square" />
-    <img src="portfolio4.jpg" alt="portfolio4" class="portrait" />
-    <img src="portfolio5.jpg" alt="portfolio5" class="square" />
-    <img src="portfolio6.jpg" alt="portfolio6" class="portrait" />
+  <!-- FINAL IMAGE ROWS -->
+  <section class="gallery-row">
+    <img src="portfolio1.jpg" alt="portfolio1" />
+    <img src="portfolio2.jpg" alt="portfolio2" />
+  </section>
+  <section class="gallery-row">
+    <img src="portfolio3.jpg" alt="portfolio3" />
+    <img src="portfolio4.jpg" alt="portfolio4" />
+  </section>
+  <section class="gallery-row">
+    <img src="portfolio5.jpg" alt="portfolio5" />
+    <img src="portfolio6.jpg" alt="portfolio6" />
   </section>
 
   <footer>
@@ -214,7 +211,9 @@
         </svg>
       </a>
     </div>
-    <p class="copyright">© 2025 CROWNED BY SILENCE. ALL RIGHTS RESERVED.</p>
+    <p class="copyright">
+      © 2025 CROWNED BY SILENCE. ALL RIGHTS RESERVED.
+    </p>
   </footer>
 
   <script>
