@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>PORTFOLIO — CROWNED BY SILENCE</title>
-  <link rel="stylesheet" href="style.css" />
   <style>
     body {
       margin: 0;
@@ -49,7 +48,6 @@
       letter-spacing: 1px;
       text-transform: uppercase;
       transition: color 0.2s ease;
-      font-family: 'Alternative Calvin Klein', sans-serif;
       font-weight: normal;
     }
 
@@ -110,28 +108,32 @@
       margin-bottom: 1rem;
     }
 
-    .masonry {
-      column-count: 2;
-      column-gap: 1px;
-      padding: 4rem 1px 2rem;
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2px;
+      padding: 4rem 2px 2rem;
       max-width: 1400px;
       margin: 0 auto;
     }
 
-    .masonry img {
+    .grid img {
       width: 100%;
-      height: auto;
+      height: 450px;
+      object-fit: cover;
       display: block;
-      margin-bottom: 1px;
-      border-radius: 0;
       pointer-events: none;
       user-select: none;
       -webkit-user-drag: none;
     }
 
     @media (max-width: 768px) {
-      .masonry {
-        column-count: 1;
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .grid img {
+        height: auto;
       }
     }
 
@@ -185,7 +187,7 @@
     <h1>PORTFOLIO</h1>
   </header>
 
-  <section class="masonry">
+  <section class="grid">
     <img src="portfolio1.jpg" alt="portfolio1" loading="lazy" />
     <img src="portfolio2.jpg" alt="portfolio2" loading="lazy" />
     <img src="portfolio3.jpg" alt="portfolio3" loading="lazy" />
