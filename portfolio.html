@@ -4,142 +4,51 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>PORTFOLIO — CROWNED BY SILENCE</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Alternative Calvin Klein', sans-serif;
-      background: #000;
-      color: #fff;
-    }
-
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: rgba(0, 0, 0, 0.8);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      z-index: 1000;
-    }
-
-    .logo {
-      font-weight: normal;
-      letter-spacing: 2px;
-      text-decoration: none;
-      color: #ffffff;
-      font-size: 0.9rem;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-    }
-
-    .nav-links a {
-      color: #ccc;
-      text-decoration: none;
-      font-size: 0.9rem;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-    }
-
-    header {
-      height: 100vh;
-      background: rgba(0, 0, 0, 0.4);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    header h1 {
-      font-size: 2.8rem;
-      letter-spacing: 2px;
-      margin: 0;
-    }
-
-    .row {
-      display: flex;
-      width: 100%;
-    }
-
-    .row img {
-      height: 300px;
-      width: auto;
-      object-fit: contain;
-      display: block;
-      margin: 0;
-    }
-
-    footer {
-      background: transparent;
-      padding: 2rem 1rem;
-      text-align: center;
-    }
-
-    footer a {
-      color: #ffffff;
-      text-decoration: none;
-      margin: 0 1rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    footer img {
-      width: 18px;
-      height: 18px;
-      object-fit: contain;
-    }
-
-    .copyright {
-      margin-top: 1rem;
-      color: #ffffff;
-      font-size: 0.75rem;
-    }
-  </style>
 </head>
-<body>
+<body style="margin: 0; background: black; color: white; font-family: 'Alternative Calvin Klein', sans-serif;" oncontextmenu="return false;" onmousedown="return false;" onselectstart="return false;">
 
-  <nav>
-    <a href="index.html" class="logo">CROWNED BY SILENCE</a>
-    <div class="nav-links">
-      <a href="portfolio.html">PORTFOLIO</a>
-      <a href="shop.html">SHOP</a>
-      <a href="index.html#about">ABOUT</a>
-      <a href="index.html#contact">CONTACT</a>
+  <nav style="position: fixed; top: 0; width: 100%; background: rgba(0,0,0,0.8); display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; z-index: 1000;">
+    <a href="index.html" style="color: white; text-decoration: none; font-size: 0.9rem; letter-spacing: 2px;">CROWNED BY SILENCE</a>
+    <div style="display: flex; gap: 2rem;">
+      <a href="portfolio.html" style="color: #ccc; text-decoration: none; font-size: 0.9rem; text-transform: uppercase;">PORTFOLIO</a>
+      <a href="shop.html" style="color: #ccc; text-decoration: none; font-size: 0.9rem; text-transform: uppercase;">SHOP</a>
+      <a href="index.html#about" style="color: #ccc; text-decoration: none; font-size: 0.9rem; text-transform: uppercase;">ABOUT</a>
+      <a href="index.html#contact" style="color: #ccc; text-decoration: none; font-size: 0.9rem; text-transform: uppercase;">CONTACT</a>
     </div>
   </nav>
 
-  <header>
-    <h1>PORTFOLIO</h1>
+  <header style="height: 100vh; display: flex; justify-content: center; align-items: center; text-align: center; background: rgba(0,0,0,0.45);">
+    <h1 style="font-size: 2.8rem; font-weight: normal; letter-spacing: 2px;">PORTFOLIO</h1>
   </header>
 
-  <!-- ROW 1 -->
-  <div class="row">
-    <img src="portfolio1.jpg" alt="portfolio1" loading="lazy" />
-    <img src="portfolio2.jpg" alt="portfolio2" loading="lazy" />
-  </div>
+  <section style="padding: 4rem 2px 2rem; display: flex; flex-direction: column; gap: 2px;">
 
-  <!-- ROW 2 -->
-  <div class="row">
-    <img src="portfolio3.jpg" alt="portfolio3" loading="lazy" />
-    <img src="portfolio4.jpg" alt="portfolio4" loading="lazy" />
-  </div>
+    <div style="display: flex; gap: 2px;">
+      <img src="portfolio1.jpg" alt="portfolio1" loading="lazy" style="height: 300px; width: auto; display: block;" />
+      <img src="portfolio2.jpg" alt="portfolio2" loading="lazy" style="height: 300px; width: auto; display: block;" />
+    </div>
 
-  <!-- ROW 3 -->
-  <div class="row">
-    <img src="portfolio5.jpg" alt="portfolio5" loading="lazy" />
-    <img src="portfolio6.jpg" alt="portfolio6" loading="lazy" />
-  </div>
+    <div style="display: flex; gap: 2px;">
+      <img src="portfolio3.jpg" alt="portfolio3" loading="lazy" style="height: 300px; width: auto; display: block;" />
+      <img src="portfolio4.jpg" alt="portfolio4" loading="lazy" style="height: 300px; width: auto; display: block;" />
+    </div>
 
-  <!-- Add more rows below in same pattern -->
+    <div style="display: flex; gap: 2px;">
+      <img src="portfolio5.jpg" alt="portfolio5" loading="lazy" style="height: 300px; width: auto; display: block;" />
+      <img src="portfolio6.jpg" alt="portfolio6" loading="lazy" style="height: 300px; width: auto; display: block;" />
+    </div>
 
-  <footer>
-    <div style="display: flex; justify-content: center; gap: 2rem;">
+    <div style="display: flex; gap: 2px;">
+      <img src="portfolio7.jpg" alt="portfolio7" loading="lazy" style="height: 300px; width: auto; display: block;" />
+      <img src="portfolio8.jpg" alt="portfolio8" loading="lazy" style="height: 300px; width: auto; display: block;" />
+    </div>
+
+  </section>
+
+  <footer style="padding: 2rem 1rem; text-align: center; text-shadow: 1px 1px 2px #000;">
+    <div style="display: flex; justify-content: center; gap: 2rem; align-items: center; padding: 1rem;">
       <a href="https://instagram.com/crownedbysilence" target="_blank">
-        <img src="instagram.svg" alt="Instagram">
+        <img src="instagram.svg" alt="Instagram" style="width: 18px; height: 18px; object-fit: contain;">
       </a>
       <a href="mailto:contact@crownedbysilence.com">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#fff" viewBox="0 0 24 24">
@@ -147,7 +56,7 @@
         </svg>
       </a>
     </div>
-    <p class="copyright">© 2025 CROWNED BY SILENCE. ALL RIGHTS RESERVED.</p>
+    <p style="color: #ffffff; font-size: 0.75rem;">© 2025 CROWNED BY SILENCE. ALL RIGHTS RESERVED.</p>
   </footer>
 
 </body>
