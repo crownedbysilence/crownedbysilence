@@ -114,14 +114,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-.gallery-grid-nona {
+
+/* NONA LIMMEN STYLE GRID */
+.grid-gallery {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 1px;
+  align-items: stretch;
 }
-.gallery-grid-nona img {
-  height: 320px;
+
+.grid-gallery img {
+  height: 350px;
   object-fit: cover;
+  flex-grow: 1;
+  flex-shrink: 1;
   width: auto;
   max-width: 100%;
+  display: block;
 }
