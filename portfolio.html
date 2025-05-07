@@ -110,25 +110,28 @@
       margin-bottom: 1rem;
     }
 
-    .art-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 2px;
-      padding: 4rem 2px 2rem;
+    .masonry {
+      column-count: 2;
+      column-gap: 1px;
+      padding: 4rem 1px 2rem;
+      max-width: 1400px;
+      margin: 0 auto;
     }
 
-    .art-grid img {
+    .masonry img {
       width: 100%;
       height: auto;
       display: block;
+      margin-bottom: 1px;
+      border-radius: 0;
       pointer-events: none;
       user-select: none;
       -webkit-user-drag: none;
     }
 
     @media (max-width: 768px) {
-      .art-grid {
-        grid-template-columns: 1fr;
+      .masonry {
+        column-count: 1;
       }
     }
 
@@ -182,12 +185,16 @@
     <h1>PORTFOLIO</h1>
   </header>
 
-<section class="masonry">
-  <img src="portfolio1.jpg" alt="portfolio1" loading="lazy" />
-  <img src="portfolio2.jpg" alt="portfolio2" loading="lazy" />
-  <img src="portfolio3.jpg" alt="portfolio3" loading="lazy" />
-  <img src="portfolio4.jpg" alt="portfolio4" loading="lazy" />
-</section>
+  <section class="masonry">
+    <img src="portfolio1.jpg" alt="portfolio1" loading="lazy" />
+    <img src="portfolio2.jpg" alt="portfolio2" loading="lazy" />
+    <img src="portfolio3.jpg" alt="portfolio3" loading="lazy" />
+    <img src="portfolio4.jpg" alt="portfolio4" loading="lazy" />
+    <img src="portfolio5.jpg" alt="portfolio5" loading="lazy" />
+    <img src="portfolio6.jpg" alt="portfolio6" loading="lazy" />
+    <img src="portfolio7.jpg" alt="portfolio7" loading="lazy" />
+    <img src="portfolio8.jpg" alt="portfolio8" loading="lazy" />
+  </section>
 
   <footer>
     <div style="display: flex; justify-content: center; gap: 2rem; align-items: center; padding: 1rem;">
