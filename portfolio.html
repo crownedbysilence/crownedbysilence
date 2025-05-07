@@ -20,7 +20,6 @@
     nav {
       position: fixed;
       top: 0;
-      left: 0;
       width: 100%;
       background: rgba(0, 0, 0, 0.8);
       display: flex;
@@ -46,10 +45,12 @@
     .nav-links a {
       color: #ccc;
       text-decoration: none;
-      font-size: 0.85rem;
+      font-size: 0.9rem;
       letter-spacing: 1px;
       text-transform: uppercase;
       transition: color 0.2s ease;
+      font-family: 'Alternative Calvin Klein', sans-serif;
+      font-weight: normal;
     }
 
     .nav-links a:hover {
@@ -120,16 +121,17 @@
       margin-bottom: 1.5rem;
       break-inside: avoid;
       display: block;
-      opacity: 0.85;
+      opacity: 1;
       border-radius: 4px;
-      transition: opacity 0.3s ease;
       pointer-events: none;
       user-select: none;
       -webkit-user-drag: none;
     }
 
-    .masonry img:hover {
-      opacity: 1;
+    @media (max-width: 768px) {
+      .masonry {
+        column-count: 1;
+      }
     }
 
     footer {
@@ -140,7 +142,7 @@
     }
 
     footer a {
-      color: #ccc;
+      color: #ffffff;
       text-decoration: none;
       margin: 0 1rem;
       display: inline-flex;
@@ -159,40 +161,34 @@
       color: #ffffff;
       font-size: 0.75rem;
     }
-
-    @media (max-width: 768px) {
-      .masonry {
-        column-count: 1;
-      }
-    }
   </style>
 </head>
 <body oncontextmenu="return false;" onmousedown="return false;" onselectstart="return false;">
-  
-<nav>
-  <a href="index.html" class="logo" style="font-size: 0.9rem; font-weight: normal; letter-spacing: 2px; color: #ffffff; text-decoration: none; font-family: 'Alternative Calvin Klein', sans-serif;">CROWNED BY SILENCE</a>
-  <div class="hamburger" onclick="toggleMenu()">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-  <div class="nav-links" id="nav-links">
-    <a href="portfolio.html">PORTFOLIO</a>
-    <a href="shop.html">SHOP</a>
-    <a href="index.html#about">ABOUT</a>
-    <a href="index.html#contact">CONTACT</a>
-  </div>
-</nav>
+
+  <nav>
+    <a href="index.html" class="logo">CROWNED BY SILENCE</a>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="nav-links" id="nav-links">
+      <a href="portfolio.html">PORTFOLIO</a>
+      <a href="shop.html">SHOP</a>
+      <a href="index.html#about">ABOUT</a>
+      <a href="index.html#contact">CONTACT</a>
+    </div>
+  </nav>
 
   <header>
     <h1>PORTFOLIO</h1>
   </header>
 
   <section class="masonry">
-    <img src="portfolio1.jpg" alt="Portfolio Image 1" loading="lazy" draggable="false" oncontextmenu="return false;" onmousedown="return false;" />
-    <img src="portfolio2.jpg" alt="Portfolio Image 2" loading="lazy" draggable="false" oncontextmenu="return false;" onmousedown="return false;" />
-    <img src="portfolio3.jpg" alt="Portfolio Image 3" loading="lazy" draggable="false" oncontextmenu="return false;" onmousedown="return false;" />
-    <img src="portfolio4.jpg" alt="Portfolio Image 4" loading="lazy" draggable="false" oncontextmenu="return false;" onmousedown="return false;" />
+    <img src="portfolio1.jpg" alt="Portfolio Image 1" loading="lazy" />
+    <img src="portfolio2.jpg" alt="Portfolio Image 2" loading="lazy" />
+    <img src="portfolio3.jpg" alt="Portfolio Image 3" loading="lazy" />
+    <img src="portfolio4.jpg" alt="Portfolio Image 4" loading="lazy" />
     <!-- Add more images as needed -->
   </section>
 
