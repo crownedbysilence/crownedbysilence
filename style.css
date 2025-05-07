@@ -113,16 +113,15 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* Ensure portfolio grid images flow cleanly */
-.portfolio-grid a {
-  flex-grow: 1;
-  flex-basis: 0;
-  overflow: hidden;
-}
 
-.portfolio-grid img {
-  display: block;
-  height: auto;
-  width: 100%;
+.gallery-grid-nona {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.gallery-grid-nona img {
+  height: 320px;
   object-fit: cover;
+  width: auto;
+  max-width: 100%;
 }
