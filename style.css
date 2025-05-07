@@ -1,90 +1,27 @@
+
 body {
   margin: 0;
-  background: url('bg.png') no-repeat center center fixed;
-  background-size: cover;
-  font-family: 'Alternative Calvin Klein', sans-serif;
-  color: white;
-  scroll-behavior: smooth;
-  user-select: none;
-  -webkit-user-drag: none;
+  background-color: #111;
+  color: #fff;
+  font-family: sans-serif;
 }
 
-nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  z-index: 1000;
-}
-
-.logo, .nav-links a {
-  font-size: 0.9rem;
-  font-weight: normal;
-  letter-spacing: 2px;
-  color: #ffffff;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-.nav-links {
-  display: flex;
-  gap: 2rem;
-}
-
-header {
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.45);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-header h1 {
-  font-size: 2.8rem;
-  letter-spacing: 2px;
-}
-
-.gallery {
+.gallery-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 1px;
-  padding: 0;
+  gap: 0;
+  align-items: flex-start;
 }
 
-.gallery img {
-  height: 400px;
-  object-fit: cover;
-  display: block;
+.gallery-grid a {
   flex-grow: 1;
   flex-basis: 0;
+  overflow: hidden;
 }
 
-footer {
-  background: transparent;
-  padding: 2rem 1rem;
-  text-align: center;
-  text-shadow: 1px 1px 2px #000;
-}
-
-footer a {
-  color: white;
-  margin: 0 1rem;
-  display: inline-flex;
-  align-items: center;
-}
-
-footer img {
-  width: 18px;
-  height: 18px;
-  object-fit: contain;
-}
-
-footer p {
-  font-size: 0.75rem;
-  margin-top: 1rem;
+.gallery-grid img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  display: block;
 }
