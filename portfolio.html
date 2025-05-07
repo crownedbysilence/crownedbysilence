@@ -110,18 +110,18 @@
       margin-bottom: 1rem;
     }
 
-    .masonry {
-      column-count: 3;
-      column-gap: 1.5rem;
-      padding: 4rem 2rem 2rem;
+    .art-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      padding: 4rem 2rem;
     }
 
-    .masonry img {
+    .art-grid img {
       width: 100%;
-      margin-bottom: 1.5rem;
-      break-inside: avoid;
+      height: 500px;
+      object-fit: cover;
       display: block;
-      opacity: 0.85;
       border-radius: 4px;
       pointer-events: none;
       user-select: none;
@@ -129,8 +129,12 @@
     }
 
     @media (max-width: 768px) {
-      .masonry {
-        column-count: 1;
+      .art-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .art-grid img {
+        height: auto;
       }
     }
 
@@ -184,14 +188,14 @@
     <h1>PORTFOLIO</h1>
   </header>
 
- <section class="art-grid">
-  <img src="portfolio1.jpg" alt="portfolio1" />
-  <img src="portfolio2.jpg" alt="portfolio2" />
-  <img src="portfolio3.jpg" alt="portfolio3" />
-  <img src="portfolio4.jpg" alt="portfolio4" />
-  <img src="portfolio5.jpg" alt="portfolio5" />
-  <img src="portfolio6.jpg" alt="portfolio6" />
-</section>
+  <section class="art-grid">
+    <img src="portfolio1.jpg" alt="portfolio1" />
+    <img src="portfolio2.jpg" alt="portfolio2" />
+    <img src="portfolio3.jpg" alt="portfolio3" />
+    <img src="portfolio4.jpg" alt="portfolio4" />
+    <img src="portfolio5.jpg" alt="portfolio5" />
+    <img src="portfolio6.jpg" alt="portfolio6" />
+  </section>
 
   <footer>
     <div style="display: flex; justify-content: center; gap: 2rem; align-items: center; padding: 1rem;">
