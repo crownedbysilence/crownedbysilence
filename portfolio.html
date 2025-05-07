@@ -7,15 +7,13 @@
   <style>
     body {
       margin: 0;
-      font-family: 'Alternative Calvin Klein', sans-serif;
-      color: #ffffff;
-      background: url('bg.png') no-repeat center center fixed;
+      background: #000 url('bg.png') no-repeat center center fixed;
       background-size: cover;
-      scroll-behavior: smooth;
+      font-family: 'Alternative Calvin Klein', sans-serif;
+      color: white;
       user-select: none;
       -webkit-user-drag: none;
     }
-
     nav {
       position: fixed;
       top: 0;
@@ -27,20 +25,17 @@
       padding: 1rem 2rem;
       z-index: 1000;
     }
-
     .logo {
       font-weight: normal;
       letter-spacing: 2px;
       text-decoration: none;
-      color: #ffffff;
+      color: white;
       font-size: 0.9rem;
     }
-
     .nav-links {
       display: flex;
       gap: 2rem;
     }
-
     .nav-links a {
       color: #ccc;
       text-decoration: none;
@@ -48,116 +43,66 @@
       letter-spacing: 1px;
       text-transform: uppercase;
       transition: color 0.2s ease;
-      font-family: 'Alternative Calvin Klein', sans-serif;
-      font-weight: normal;
     }
-
     .nav-links a:hover {
-      color: #ffffff;
+      color: white;
     }
-
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-    }
-
-    .hamburger span {
-      height: 2px;
-      width: 25px;
-      background: #ffffff;
-      margin: 4px 0;
-    }
-
-    @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-        flex-direction: column;
-        background: #111;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        width: 100%;
-        text-align: right;
-        padding: 1rem;
-      }
-
-      .nav-links.active {
-        display: flex;
-      }
-
-      .hamburger {
-        display: flex;
-      }
-    }
-
     header {
       height: 100vh;
       background: rgba(0, 0, 0, 0.45);
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
-      padding: 0 2rem;
     }
-
     header h1 {
       font-size: 2.8rem;
-      font-weight: normal;
       letter-spacing: 2px;
-      margin-bottom: 1rem;
+      font-weight: normal;
     }
-
-    .masonry {
-      column-count: 2;
-      column-gap: 1px;
-      padding: 4rem 1px 2rem;
-      max-width: 1400px;
-      margin: 0 auto;
+    .row {
+      display: flex;
+      gap: 2px;
+      padding: 2px;
     }
-
-    .masonry img {
-      width: 100%;
-      height: auto;
+    .row img {
+      height: 600px;
+      width: auto;
+      object-fit: cover;
       display: block;
-      margin-bottom: 1px;
-      pointer-events: none;
       user-select: none;
       -webkit-user-drag: none;
     }
-
     @media (max-width: 768px) {
-      .masonry {
-        column-count: 1;
+      .row {
+        flex-direction: column;
+      }
+      .row img {
+        width: 100%;
+        height: auto;
       }
     }
-
     footer {
       background: transparent;
       padding: 2rem 1rem;
       text-align: center;
-      text-shadow: 1px 1px 2px #000;
     }
-
     footer a {
-      color: #ffffff;
+      color: white;
       text-decoration: none;
       margin: 0 1rem;
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
     }
-
     footer img {
       width: 18px;
       height: 18px;
       object-fit: contain;
     }
-
     .copyright {
       margin-top: 1rem;
-      color: #ffffff;
+      color: white;
       font-size: 0.75rem;
     }
   </style>
@@ -166,12 +111,7 @@
 
   <nav>
     <a href="index.html" class="logo">CROWNED BY SILENCE</a>
-    <div class="hamburger" onclick="toggleMenu()">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-    <div class="nav-links" id="nav-links">
+    <div class="nav-links">
       <a href="portfolio.html">PORTFOLIO</a>
       <a href="shop.html">SHOP</a>
       <a href="index.html#about">ABOUT</a>
@@ -183,16 +123,24 @@
     <h1>PORTFOLIO</h1>
   </header>
 
-  <section class="masonry">
-    <img src="portfolio1.jpg" alt="portfolio1" loading="lazy" />
-    <img src="portfolio2.jpg" alt="portfolio2" loading="lazy" />
-    <img src="portfolio3.jpg" alt="portfolio3" loading="lazy" />
-    <img src="portfolio4.jpg" alt="portfolio4" loading="lazy" />
-    <img src="portfolio5.jpg" alt="portfolio5" loading="lazy" />
-    <img src="portfolio6.jpg" alt="portfolio6" loading="lazy" />
-    <img src="portfolio7.jpg" alt="portfolio7" loading="lazy" />
-    <img src="portfolio8.jpg" alt="portfolio8" loading="lazy" />
-  </section>
+  <main style="margin-top: 6rem;">
+    <div class="row">
+      <img src="portfolio1.jpg" alt="portfolio1" />
+      <img src="portfolio2.jpg" alt="portfolio2" />
+    </div>
+    <div class="row">
+      <img src="portfolio3.jpg" alt="portfolio3" />
+      <img src="portfolio4.jpg" alt="portfolio4" />
+    </div>
+    <div class="row">
+      <img src="portfolio5.jpg" alt="portfolio5" />
+      <img src="portfolio6.jpg" alt="portfolio6" />
+    </div>
+    <div class="row">
+      <img src="portfolio7.jpg" alt="portfolio7" />
+      <img src="portfolio8.jpg" alt="portfolio8" />
+    </div>
+  </main>
 
   <footer>
     <div style="display: flex; justify-content: center; gap: 2rem; align-items: center; padding: 1rem;">
@@ -209,13 +157,6 @@
       © 2025 CROWNED BY SILENCE. ALL RIGHTS RESERVED.
     </p>
   </footer>
-
-  <script>
-    function toggleMenu() {
-      const nav = document.getElementById('nav-links');
-      nav.classList.toggle('active');
-    }
-  </script>
 
 </body>
 </html>
