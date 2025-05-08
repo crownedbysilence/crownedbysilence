@@ -37,11 +37,11 @@ header p {
   font-weight: normal;
 }
 
-/* Portfolio Grid */
+/* Portfolio section */
 .portfolio {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 0.5rem;
+  gap: 2rem;
   padding: 4rem 2rem;
 }
 
@@ -63,12 +63,6 @@ header p {
   -webkit-user-drag: none;
 }
 
-/* Navigation Highlight */
-.nav-links a.active {
-  color: #ffffff;
-  font-weight: bold;
-}
-
 /* Footer */
 footer {
   text-align: center;
@@ -82,7 +76,7 @@ footer a {
   text-decoration: none;
 }
 
-/* Button */
+/* Buttons */
 .view-all-button {
   display: inline-block;
   padding: 0.8rem 1.6rem;
@@ -107,7 +101,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #ffffff;
 }
 
-/* Responsive Typography */
+/* Responsive */
 @media (max-width: 768px) {
   header h1 {
     font-size: 2rem;
