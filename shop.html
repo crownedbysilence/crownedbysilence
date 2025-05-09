@@ -12,6 +12,15 @@
       color: #ffffff;
       background: url('bg.png') no-repeat center center fixed;
       background-size: cover;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    img {
+      -webkit-user-drag: none;
+      user-drag: none;
     }
 
     nav {
@@ -95,6 +104,7 @@
       height: auto;
       border-radius: 3px;
       margin-bottom: 1rem;
+      opacity: 0.75;
     }
 
     .shop-item h2 {
@@ -184,7 +194,8 @@
     }
   </style>
 </head>
-<body>
+
+<body oncontextmenu="return false;">
 
   <nav>
     <a href="index.html" class="logo">CROWNED BY SILENCE</a>
@@ -208,9 +219,10 @@
 
   <section class="shop-grid">
     <div class="shop-item">
-      <img src="portfolio3.jpg" alt="Wings of Exile" style="opacity: 0.75;">      <h2>WINGS OF EXILE – LIMITED EDITION PRINT ♡</h2>
+      <img src="portfolio3.jpg" alt="Wings of Exile">
+      <h2>WINGS OF EXILE – LIMITED EDITION PRINT ♡</h2>
       <p style="font-size: 0.85rem; color: #ccc; margin: 0.5rem 0;">
-      Printed on museum-grade Hahnemühle paper. Sealed with certificate of authenticity. Limited edition of 33.
+        Printed on museum-grade Hahnemühle paper. Sealed with certificate of authenticity. Limited edition of 33.
       </p>
       <a href="https://crownedbysilence.gumroad.com/l/wingsofexile" target="_blank">BUY NOW – $590</a>
     </div>
