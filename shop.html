@@ -46,8 +46,6 @@
       letter-spacing: 1px;
       text-transform: uppercase;
       transition: color 0.2s ease;
-      font-family: 'Alternative Calvin Klein', sans-serif;
-      font-weight: normal;
     }
 
     .nav-links a:hover {
@@ -55,40 +53,67 @@
     }
 
     header {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      padding: 8rem 2rem 2rem;
       text-align: center;
-      padding: 0 2rem;
     }
 
     header h1 {
       font-size: 2.8rem;
       font-weight: normal;
       letter-spacing: 2px;
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
     }
 
     header p {
       font-size: 1rem;
       color: #ffffff;
-      margin-top: -1rem;
+      margin-top: 0;
     }
 
     .shop-grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 2rem;
-      padding: 4rem 2rem;
+      gap: 4rem;
+      padding: 2rem;
       text-align: center;
     }
 
-    @media (min-width: 768px) {
-      .shop-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
+    .shop-item {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 1rem;
+      border-radius: 4px;
+      transition: transform 0.3s ease;
+    }
+
+    .shop-item:hover {
+      transform: scale(1.02);
+    }
+
+    .shop-item img {
+      width: 100%;
+      max-width: 480px;
+      height: auto;
+      border-radius: 3px;
+      margin-bottom: 1rem;
+    }
+
+    .shop-item h2 {
+      font-size: 1rem;
+      letter-spacing: 1px;
+      margin: 0.5rem 0;
+      font-weight: normal;
+    }
+
+    .shop-item a {
+      display: inline-block;
+      margin-top: 0.5rem;
+      padding: 0.5rem 1rem;
+      background-color: #a03694;
+      color: white;
+      text-decoration: none;
+      border-radius: 2px;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
     }
 
     footer {
@@ -152,35 +177,41 @@
       .hamburger {
         display: flex;
       }
+
+      .shop-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 <body>
-  
+
   <nav>
-    <a href="index.html" class="logo" style="font-size: 0.9rem; font-weight: normal; letter-spacing: 2px; color: #ffffff; text-decoration: none; font-family: 'Alternative Calvin Klein', sans-serif;">CROWNED BY SILENCE</a>
+    <a href="index.html" class="logo">CROWNED BY SILENCE</a>
     <div class="hamburger" onclick="toggleMenu()">
       <span></span>
       <span></span>
       <span></span>
     </div>
     <div class="nav-links" id="nav-links">
-      <a href="portfolio.html" style="font-size: 0.9rem; font-weight: normal; letter-spacing: 1px; text-transform: uppercase; color: #ccc; text-decoration: none; font-family: 'Alternative Calvin Klein', sans-serif;">PORTFOLIO</a>
-      <a href="shop.html" style="font-size: 0.9rem; font-weight: normal; letter-spacing: 1px; text-transform: uppercase; color: #ccc; text-decoration: none; font-family: 'Alternative Calvin Klein', sans-serif;">SHOP</a>
-      <a href="index.html#about" style="font-size: 0.9rem; font-weight: normal; letter-spacing: 1px; text-transform: uppercase; color: #ccc; text-decoration: none; font-family: 'Alternative Calvin Klein', sans-serif;">ABOUT</a>
-      <a href="index.html#contact" style="font-size: 0.9rem; font-weight: normal; letter-spacing: 1px; text-transform: uppercase; color: #ccc; text-decoration: none; font-family: 'Alternative Calvin Klein', sans-serif;">CONTACT</a>
+      <a href="portfolio.html">PORTFOLIO</a>
+      <a href="shop.html">SHOP</a>
+      <a href="index.html#about">ABOUT</a>
+      <a href="index.html#contact">CONTACT</a>
     </div>
   </nav>
 
   <header>
     <h1>SHOP</h1>
-    <p>EXCLUSIVE PRINTS — COMING SOON</p>
+    <p>EXCLUSIVE PRINTS — NOW AVAILABLE</p>
   </header>
 
   <section class="shop-grid">
-    <p>SHOP ITEM 1</p>
-    <p>SHOP ITEM 2</p>
-    <p>SHOP ITEM 3</p>
+    <div class="shop-item">
+      <img src="portfolio3.jpg" alt="Wings of Exile">
+      <h2>WINGS OF EXILE – LIMITED EDITION PRINT ♡</h2>
+      <a href="https://crownedbysilence.gumroad.com/l/wingsofexile" target="_blank">BUY NOW – $590</a>
+    </div>
   </section>
 
   <footer>
