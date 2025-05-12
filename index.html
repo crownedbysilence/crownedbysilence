@@ -93,6 +93,26 @@
       pointer-events: none;
     }
 
+    .view-all-button {
+      display: inline-block;
+      padding: 0.6rem 1.4rem;
+      background-color: rgba(255, 255, 255, 0.05);
+      border: 1px solid #fff;
+      color: #fff;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 0.8rem;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      border-radius: 2px;
+      margin-top: 1rem;
+    }
+
+    .view-all-button:hover {
+      background-color: #fff;
+      color: #000;
+    }
+
     section {
       padding: 4rem 2rem;
       text-align: center;
@@ -168,7 +188,6 @@
       margin-top: 2rem;
     }
 
-    /* Hide “Built with Kit” */
     div[style*="kit"] {
       display: none !important;
     }
