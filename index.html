@@ -129,6 +129,27 @@
       margin: 0 auto;
     }
 
+    .about-text {
+      line-height: 2;
+      white-space: pre-line;
+    }
+
+    #contact-form h2,
+    #contact-form p {
+      margin-bottom: 1rem;
+    }
+
+    #contact-form {
+      margin-top: 2rem;
+    }
+
+    #contact-form > div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 2rem;
+    }
+
     footer {
       padding: 2rem 1rem;
       text-align: center;
@@ -181,13 +202,6 @@
       }
     }
 
-    #contact-form > div {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 2rem;
-    }
-
     div[style*="kit"] {
       display: none !important;
     }
@@ -225,7 +239,7 @@
 
   <section id="about">
     <h2>ABOUT</h2>
-    <p>
+    <p class="about-text">
       CROWNED BY SILENCE<br>
       A FINE ART PROJECT<br>
       BORN IN DARKNESS,<br>
