@@ -167,12 +167,6 @@
       }
     }
 
-    /* REMOVE KIT LOGO */
-    div[style*="Kit"] {
-      display: none !important;
-    }
-
-    /* Centering the form */
     #contact-form > div {
       display: flex;
       justify-content: center;
@@ -205,9 +199,9 @@
   </header>
 
   <section id="portfolio" class="portfolio">
-    <img src="portfolio1.jpg" alt="Portfolio Image 1" draggable="false" />
-    <img src="portfolio2.jpg" alt="Portfolio Image 2" draggable="false" />
-    <img src="portfolio3.jpg" alt="Portfolio Image 3" draggable="false" />
+    <img src="portfolio1.jpg" alt="Portfolio Image 1" />
+    <img src="portfolio2.jpg" alt="Portfolio Image 2" />
+    <img src="portfolio3.jpg" alt="Portfolio Image 3" />
     <div style="text-align: center; margin-top: 2rem;">
       <a href="portfolio.html" class="view-all-button">VIEW FULL PORTFOLIO</a>
     </div>
@@ -228,14 +222,12 @@
 
   <section id="contact">
     <h2>CONTACT</h2>
-
     <section id="contact-form">
       <h2>ENTER THE KINGDOM</h2>
       <p>
         join the silent collector’s list.<br>
         receive a welcome gift and limited edition drops.
       </p>
-
       <div>
         <script async data-uid="c4462138a5" src="https://crownedbysilence.kit.com/c4462138a5/index.js"></script>
       </div>
@@ -262,12 +254,20 @@
       nav.classList.toggle('active');
     }
 
-    document.addEventListener('contextmenu', event => event.preventDefault());
+    document.addEventListener('contextmenu', e => e.preventDefault());
     document.querySelectorAll('img').forEach(img => {
       img.setAttribute('draggable', 'false');
       img.addEventListener('dragstart', e => e.preventDefault());
     });
     document.addEventListener('selectstart', e => e.preventDefault());
+
+    // Remove "Built with Kit" branding dynamically
+    window.addEventListener("DOMContentLoaded", () => {
+      const kitTag = document.querySelector('a[href*="kit.co"], a[href*="builtwithkit"]');
+      if (kitTag && kitTag.parentElement) {
+        kitTag.parentElement.style.display = 'none';
+      }
+    });
   </script>
 </body>
 </html>
