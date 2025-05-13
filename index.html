@@ -220,24 +220,20 @@
     <h2>CONTACT</h2>
   </section>
 
-<!-- SUBSCRIBE BUTTON (CENTERED, NO KIT BANNER) -->
+<!-- SUBSCRIBE BUTTON (CENTERED, NO KIT TEXT) -->
 <div style="display: flex; justify-content: center; margin: 3rem 0;" id="subscribe-form">
-  <script async data-uid="c4462138a5" src="https://crownedbysilence.kit.com/c4462138a5/index.js" onload="removeKitText()"></script>
+  <script async data-uid="c4462138a5" src="https://crownedbysilence.ck.page/c4462138a5/index.js"></script>
 </div>
 
-<!-- SCRIPT TO REMOVE 'BUILT WITH CONVERTKIT' IMMEDIATELY -->
 <script>
-  function removeKitText() {
-    const kill = () => {
-      document.querySelectorAll('a, div, p, span').forEach(el => {
-        if (el.innerText?.toLowerCase().includes("built with")) {
-          el.remove();
-        }
-      });
-    };
-    kill();
-    new MutationObserver(kill).observe(document.body, { childList: true, subtree: true });
-  }
+  // Remove any leftover ConvertKit branding, if injected
+  const removeKitBranding = () => {
+    document.querySelectorAll('a, div, p, span').forEach(el => {
+      if (el.innerText?.toLowerCase().includes("built with")) el.remove();
+    });
+  };
+  const observer = new MutationObserver(removeKitBranding);
+  observer.observe(document.body, { childList: true, subtree: true });
 </script>
   
   <footer>
