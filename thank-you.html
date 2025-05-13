@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Thank You | Crowned By Silence</title>
-  <link href="style.css" rel="stylesheet" />
+  <title>Thank You | CROWNED BY SILENCE</title>
+  <link rel="stylesheet" href="style.css" />
   <style>
     body {
       margin: 0;
       font-family: 'Alternative Calvin Klein', sans-serif;
-      color: #ffffff;
       background: url('bg.png') no-repeat center center fixed;
       background-size: cover;
+      color: #ffffff;
       scroll-behavior: smooth;
     }
 
@@ -19,7 +19,7 @@
       position: fixed;
       top: 0;
       width: 100%;
-      background: rgba(0, 0, 0, 0.8);
+      background: rgba(0, 0, 0, 0.9);
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -51,6 +51,40 @@
       color: #ffffff;
     }
 
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background-color: #fff;
+      margin: 4px 0;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #000;
+        flex-direction: column;
+        width: 100%;
+        display: none;
+        padding: 1rem;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+
     header {
       height: 100vh;
       display: flex;
@@ -73,13 +107,36 @@
       margin: 0.25rem 0;
       color: #ffffff;
     }
+
+    .button {
+      margin-top: 2rem;
+      padding: 0.75rem 2rem;
+      border: 1px solid #fff;
+      background: transparent;
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .button:hover {
+      background: #fff;
+      color: #000;
+    }
   </style>
 </head>
 <body>
   <nav>
-    <a class="logo" href="index.html">CROWNED BY SILENCE</a>
-    <div class="nav-links" id="nav-links">
-      <a href="portfolio.html">GALLERY</a>
+    <a class="logo" href="index.html">CROWNED<br>BY<br>SILENCE</a>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="nav-links" id="navLinks">
+      <a href="gallery.html">GALLERY</a>
       <a href="shop.html">SHOP</a>
       <a href="index.html#about">ABOUT</a>
       <a href="index.html#contact">CONTACT</a>
@@ -90,13 +147,14 @@
     <h1>THANK YOU</h1>
     <p>YOU'RE IN.</p>
     <p>WELCOME TO THE KINGDOM.</p>
-  
-    <div style="margin-top: 2rem;">
-      <a href="portfolio.html" style="display: inline-block; padding: 0.75rem 1.5rem; border: 1px solid #ffffff; color: #ffffff; text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase;">
-        Enter the Gallery
-      </a>
-    </div>
-
+    <a class="button" href="gallery.html">ENTER THE GALLERY</a>
   </header>
+
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById('navLinks');
+      navLinks.classList.toggle('active');
+    }
+  </script>
 </body>
 </html>
