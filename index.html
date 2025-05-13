@@ -183,7 +183,7 @@
     }
   }
 </style>
-</meta></meta></head>
+</head>
 <body>
 <nav>
 <a class="logo" href="index.html" style="font-size: 0.9rem; font-weight: normal; letter-spacing: 2px; color: #ffffff; text-decoration: none; font-family: 'Alternative Calvin Klein', sans-serif;">CROWNED BY SILENCE</a>
@@ -265,11 +265,11 @@ document.querySelectorAll('img').forEach(img => {
 });
 document.addEventListener('selectstart', e => e.preventDefault());
 
-// FULLY REMOVE ConvertKit Badge
+// FINAL: REMOVE "Built with Kit"
 const observer = new MutationObserver(() => {
-  document.querySelectorAll('a, div').forEach(el => {
-    if (el.textContent?.toLowerCase().includes('built with convertkit')) {
-      el.style.display = 'none';
+  document.querySelectorAll('a, div, span').forEach(el => {
+    if (el.textContent?.toLowerCase().includes('built with kit')) {
+      el.remove();
     }
   });
 });
