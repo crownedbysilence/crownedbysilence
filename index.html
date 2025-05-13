@@ -265,10 +265,10 @@ document.querySelectorAll('img').forEach(img => {
 });
 document.addEventListener('selectstart', e => e.preventDefault());
 
-// FINAL: REMOVE "Built with Kit"
+// FULLY REMOVE ConvertKit attribution
 const observer = new MutationObserver(() => {
-  document.querySelectorAll('a, div, span').forEach(el => {
-    if (el.textContent?.toLowerCase().includes('built with kit')) {
+  document.querySelectorAll('*').forEach(el => {
+    if (el.innerText && el.innerText.toLowerCase().includes('built with kit')) {
       el.remove();
     }
   });
