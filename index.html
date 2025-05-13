@@ -169,6 +169,23 @@
       }
     }
     
+    /* Hide the "Built with" text */
+    .subscribe-container .built-with {
+      display: none !important;
+    }
+    
+    .subscribe-container .formkit-powered-by {
+      display: none !important;
+    }
+    
+    .subscribe-container .formkit-form > div:last-child {
+      display: none !important;
+    }
+    
+    .subscribe-container .formkit-disclaimer {
+      display: none !important;
+    }
+    
 </style>
 </head>
 <body>
@@ -219,7 +236,7 @@
   <section id="contact">
     <h2>CONTACT</h2>
     <!-- SUBSCRIBE BUTTON -->
-    <div style="display: flex; justify-content: center; margin: 2rem 0;">
+    <div class="subscribe-container" style="display: flex; justify-content: center; margin: 2rem 0;">
       <script async data-uid="c4462138a5" src="https://crownedbysilence.kit.com/c4462138a5/index.js"></script>
     </div>
   </section>
