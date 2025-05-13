@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>THANK YOU | CROWNED BY SILENCE</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You | Crowned By Silence</title>
   <link rel="stylesheet" href="style.css" />
   <style>
     body {
@@ -33,7 +33,6 @@
       text-decoration: none;
       color: #fff;
       font-size: 0.9rem;
-      font-family: 'Alternative Calvin Klein', sans-serif;
     }
 
     .nav-links {
@@ -47,11 +46,51 @@
       font-size: 0.9rem;
       text-transform: uppercase;
       transition: color 0.2s ease;
-      font-family: 'Alternative Calvin Klein', sans-serif;
     }
 
     .nav-links a:hover {
       color: #ffffff;
+    }
+
+    header {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 2rem;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      font-weight: normal;
+      letter-spacing: 2px;
+      margin-bottom: 1rem;
+    }
+
+    header p {
+      font-size: 1rem;
+      margin: 0.25rem 0;
+      color: #ffffff;
+    }
+
+    .view-all-button {
+      display: inline-block;
+      padding: 0.8rem 1.6rem;
+      background: none;
+      color: #ffffff;
+      border: 2px solid #ffffff;
+      text-decoration: none;
+      font-size: 1rem;
+      margin-top: 2rem;
+      transition: background 0.3s, color 0.3s;
+      font-weight: normal;
+    }
+
+    .view-all-button:hover {
+      background: #ffffff;
+      color: #000000;
     }
 
     .hamburger {
@@ -87,59 +126,18 @@
       .hamburger {
         display: flex;
       }
-    }
 
-    header {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 0 2rem;
-    }
+      header h1 {
+        font-size: 2rem;
+      }
 
-    header h1 {
-      font-size: 2rem;
-      font-weight: normal;
-      letter-spacing: 2px;
-      margin-bottom: 1rem;
-    }
-
-    header p {
-      font-size: 1rem;
-      margin: 0.25rem 0;
-      color: #ffffff;
-    }
-
-    footer {
-      background: transparent;
-      padding: 2rem 1rem;
-    }
-
-    footer a {
-      color: #ffffff;
-      text-decoration: none;
-      margin: 0 1rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    footer img {
-      width: 24px;
-      height: 24px;
-      object-fit: contain;
-    }
-
-    .copyright {
-      margin-top: 1rem;
-      color: #ffffff;
-      font-size: 0.75rem;
+      header p {
+        font-size: 0.85rem;
+      }
     }
   </style>
 </head>
-<body oncontextmenu="return false;">
+<body>
   <nav>
     <a href="index.html" class="logo">CROWNED BY SILENCE</a>
     <div class="hamburger" onclick="toggleMenu()">
@@ -159,23 +157,8 @@
     <h1>THANK YOU</h1>
     <p>YOU'RE IN.</p>
     <p>WELCOME TO THE KINGDOM.</p>
+    <a href="gallery.html" class="view-all-button">VIEW GALLERY</a>
   </header>
-
-  <footer>
-    <div style="display: flex; justify-content: center; gap: 2rem; align-items: center; padding: 1rem;">
-      <a href="https://instagram.com/crownedbysilence" target="_blank">
-        <img src="instagram.svg" alt="Instagram">
-      </a>
-      <a href="mailto:contact@crownedbysilence.com">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#fff" viewBox="0 0 24 24">
-          <path d="M12 13.065L.75 4.5h22.5L12 13.065zm0 2.17L.75 6.67v12.83h22.5V6.67L12 15.235z"/>
-        </svg>
-      </a>
-    </div>
-    <p class="copyright">
-      © 2025 CROWNED BY SILENCE. ALL RIGHTS RESERVED.
-    </p>
-  </footer>
 
   <script>
     function toggleMenu() {
