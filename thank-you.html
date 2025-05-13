@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Thank You | Crowned By Silence</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>THANK YOU — CROWNED BY SILENCE</title>
   <link rel="stylesheet" href="style.css" />
   <style>
     body {
@@ -31,7 +31,7 @@
       font-weight: normal;
       letter-spacing: 2px;
       text-decoration: none;
-      color: #fff;
+      color: #ffffff;
       font-size: 0.9rem;
     }
 
@@ -44,53 +44,13 @@
       color: #ccc;
       text-decoration: none;
       font-size: 0.9rem;
+      letter-spacing: 1px;
       text-transform: uppercase;
       transition: color 0.2s ease;
     }
 
     .nav-links a:hover {
       color: #ffffff;
-    }
-
-    header {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 0 2rem;
-    }
-
-    header h1 {
-      font-size: 2.8rem;
-      font-weight: normal;
-      letter-spacing: 2px;
-      margin-bottom: 1rem;
-    }
-
-    header p {
-      font-size: 1rem;
-      margin: 0.25rem 0;
-      color: #ffffff;
-    }
-
-    .view-all-button {
-      display: inline-block;
-      padding: 0.8rem 1.6rem;
-      background: none;
-      color: #ffffff;
-      border: 2px solid #ffffff;
-      text-decoration: none;
-      font-size: 1rem;
-      margin-top: 2rem;
-      transition: background 0.3s, color 0.3s;
-      font-weight: normal;
-    }
-
-    .view-all-button:hover {
-      background: #ffffff;
-      color: #000000;
     }
 
     .hamburger {
@@ -102,36 +62,8 @@
     .hamburger span {
       height: 2px;
       width: 25px;
-      background: #ffffff;
+      background: #fff;
       margin: 4px 0;
-    }
-
-    footer {
-      background: transparent;
-      padding: 2rem 1rem;
-      text-align: center;
-      text-shadow: 1px 1px 2px #000;
-    }
-
-    footer a {
-      color: #ffffff;
-      text-decoration: none;
-      margin: 0 1rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    footer img {
-      width: 24px;
-      height: 24px;
-      object-fit: contain;
-    }
-
-    .copyright {
-      margin-top: 1rem;
-      color: #ffffff;
-      font-size: 0.75rem;
     }
 
     @media (max-width: 768px) {
@@ -154,20 +86,82 @@
       .hamburger {
         display: flex;
       }
+    }
 
-      header h1 {
-        font-size: 2rem;
-      }
+    header {
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.45);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 2rem;
+    }
 
-      header p {
-        font-size: 0.85rem;
-      }
+    header h1 {
+      font-size: 2.8rem;
+      font-weight: normal;
+      letter-spacing: 2px;
+      margin-bottom: 1rem;
+    }
+
+    header p {
+      font-size: 1rem;
+      margin: 0.3rem 0;
+    }
+
+    .view-gallery-btn {
+      margin-top: 2rem;
+      padding: 0.75rem 1.5rem;
+      background: transparent;
+      border: 1px solid #fff;
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    .view-gallery-btn:hover {
+      background: #ffffff;
+      color: #000000;
+    }
+
+    footer {
+      background: transparent;
+      padding: 2rem 1rem;
+      text-align: center;
+      text-shadow: 1px 1px 2px #000;
+    }
+
+    footer a {
+      color: #ffffff;
+      text-decoration: none;
+      margin: 0 1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    footer img {
+      width: 18px;
+      height: 18px;
+      object-fit: contain;
+    }
+
+    .copyright {
+      margin-top: 1rem;
+      color: #ffffff;
+      font-size: 0.75rem;
     }
   </style>
 </head>
-<body>
+
+<body oncontextmenu="return false;">
   <nav>
-    <a href="index.html" class="logo">CROWNED BY SILENCE</a>
+    <a class="logo" href="index.html">CROWNED BY SILENCE</a>
     <div class="hamburger" onclick="toggleMenu()">
       <span></span>
       <span></span>
@@ -185,7 +179,7 @@
     <h1>THANK YOU</h1>
     <p>YOU'RE IN.</p>
     <p>WELCOME TO THE KINGDOM.</p>
-    <a href="gallery.html" class="view-all-button">VIEW GALLERY</a>
+    <a class="view-gallery-btn" href="gallery.html">VIEW GALLERY</a>
   </header>
 
   <footer>
