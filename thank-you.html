@@ -51,41 +51,6 @@
       color: #ffffff;
     }
 
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-    }
-
-    .hamburger span {
-      height: 2px;
-      width: 25px;
-      background: #ffffff;
-      margin: 4px 0;
-    }
-
-    @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-        flex-direction: column;
-        background: #111;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        width: 100%;
-        text-align: right;
-        padding: 1rem;
-      }
-
-      .nav-links.active {
-        display: flex;
-      }
-
-      .hamburger {
-        display: flex;
-      }
-    }
-
     header {
       height: 100vh;
       display: flex;
@@ -108,35 +73,13 @@
       margin: 0.25rem 0;
       color: #ffffff;
     }
-
-    .button-link {
-      margin-top: 2rem;
-      padding: 0.75rem 1.5rem;
-      background-color: transparent;
-      border: 1px solid white;
-      color: white;
-      text-decoration: none;
-      font-size: 0.85rem;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      cursor: pointer;
-    }
-
-    .button-link:hover {
-      background-color: rgba(255, 255, 255, 0.1);
-    }
   </style>
 </head>
 <body>
   <nav>
     <a class="logo" href="index.html">CROWNED BY SILENCE</a>
-    <div class="hamburger" onclick="toggleMenu()">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
     <div class="nav-links" id="nav-links">
-      <a href="gallery.html">GALLERY</a>
+      <a href="portfolio.html">PORTFOLIO</a>
       <a href="shop.html">SHOP</a>
       <a href="index.html#about">ABOUT</a>
       <a href="index.html#contact">CONTACT</a>
@@ -147,14 +90,13 @@
     <h1>THANK YOU</h1>
     <p>YOU'RE IN.</p>
     <p>WELCOME TO THE KINGDOM.</p>
-    <a class="button-link" href="gallery.html">ENTER THE GALLERY</a>
-  </header>
+  
+    <div style="margin-top: 2rem;">
+      <a href="portfolio.html" style="display: inline-block; padding: 0.75rem 1.5rem; border: 1px solid #ffffff; color: #ffffff; text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase;">
+        Enter the Gallery
+      </a>
+    </div>
 
-  <script>
-    function toggleMenu() {
-      const nav = document.getElementById('nav-links');
-      nav.classList.toggle('active');
-    }
-  </script>
+  </header>
 </body>
 </html>
