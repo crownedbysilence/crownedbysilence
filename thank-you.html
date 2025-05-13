@@ -2,16 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Thank You | CROWNED BY SILENCE</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>THANK YOU | CROWNED BY SILENCE</title>
   <link rel="stylesheet" href="style.css" />
   <style>
     body {
       margin: 0;
       font-family: 'Alternative Calvin Klein', sans-serif;
+      color: #ffffff;
       background: url('bg.png') no-repeat center center fixed;
       background-size: cover;
-      color: #ffffff;
       scroll-behavior: smooth;
     }
 
@@ -19,7 +19,7 @@
       position: fixed;
       top: 0;
       width: 100%;
-      background: rgba(0, 0, 0, 0.9);
+      background: rgba(0, 0, 0, 0.8);
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -32,6 +32,8 @@
       letter-spacing: 2px;
       text-decoration: none;
       color: #fff;
+      font-size: 0.9rem;
+      font-family: 'Alternative Calvin Klein', sans-serif;
     }
 
     .nav-links {
@@ -45,6 +47,7 @@
       font-size: 0.9rem;
       text-transform: uppercase;
       transition: color 0.2s ease;
+      font-family: 'Alternative Calvin Klein', sans-serif;
     }
 
     .nav-links a:hover {
@@ -57,22 +60,23 @@
       cursor: pointer;
     }
 
-    .hamburger div {
+    .hamburger span {
+      height: 2px;
       width: 25px;
-      height: 3px;
-      background-color: #fff;
+      background: #ffffff;
       margin: 4px 0;
     }
 
     @media (max-width: 768px) {
       .nav-links {
-        position: absolute;
-        top: 60px;
-        right: 0;
-        background: #000;
-        flex-direction: column;
-        width: 100%;
         display: none;
+        flex-direction: column;
+        background: #111;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        text-align: right;
         padding: 1rem;
       }
 
@@ -108,34 +112,42 @@
       color: #ffffff;
     }
 
-    .button {
-      margin-top: 2rem;
-      padding: 0.75rem 2rem;
-      border: 1px solid #fff;
+    footer {
       background: transparent;
-      color: #fff;
-      text-transform: uppercase;
-      font-size: 0.9rem;
-      letter-spacing: 1px;
-      text-decoration: none;
-      transition: background 0.3s ease;
+      padding: 2rem 1rem;
     }
 
-    .button:hover {
-      background: #fff;
-      color: #000;
+    footer a {
+      color: #ffffff;
+      text-decoration: none;
+      margin: 0 1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    footer img {
+      width: 24px;
+      height: 24px;
+      object-fit: contain;
+    }
+
+    .copyright {
+      margin-top: 1rem;
+      color: #ffffff;
+      font-size: 0.75rem;
     }
   </style>
 </head>
-<body>
+<body oncontextmenu="return false;">
   <nav>
-    <a class="logo" href="index.html">CROWNED<br>BY<br>SILENCE</a>
+    <a href="index.html" class="logo">CROWNED BY SILENCE</a>
     <div class="hamburger" onclick="toggleMenu()">
-      <div></div>
-      <div></div>
-      <div></div>
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
-    <div class="nav-links" id="navLinks">
+    <div class="nav-links" id="nav-links">
       <a href="gallery.html">GALLERY</a>
       <a href="shop.html">SHOP</a>
       <a href="index.html#about">ABOUT</a>
@@ -147,13 +159,28 @@
     <h1>THANK YOU</h1>
     <p>YOU'RE IN.</p>
     <p>WELCOME TO THE KINGDOM.</p>
-    <a class="button" href="gallery.html">ENTER THE GALLERY</a>
   </header>
+
+  <footer>
+    <div style="display: flex; justify-content: center; gap: 2rem; align-items: center; padding: 1rem;">
+      <a href="https://instagram.com/crownedbysilence" target="_blank">
+        <img src="instagram.svg" alt="Instagram">
+      </a>
+      <a href="mailto:contact@crownedbysilence.com">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#fff" viewBox="0 0 24 24">
+          <path d="M12 13.065L.75 4.5h22.5L12 13.065zm0 2.17L.75 6.67v12.83h22.5V6.67L12 15.235z"/>
+        </svg>
+      </a>
+    </div>
+    <p class="copyright">
+      © 2025 CROWNED BY SILENCE. ALL RIGHTS RESERVED.
+    </p>
+  </footer>
 
   <script>
     function toggleMenu() {
-      const navLinks = document.getElementById('navLinks');
-      navLinks.classList.toggle('active');
+      const nav = document.getElementById('nav-links');
+      nav.classList.toggle('active');
     }
   </script>
 </body>
