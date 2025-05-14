@@ -2,10 +2,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"/>
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>TERMS & CONDITIONS — CROWNED BY SILENCE</title>
-  <link href="style.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css" />
   <style>
     body {
       margin: 0;
@@ -15,6 +15,7 @@
       background-size: cover;
       scroll-behavior: smooth;
     }
+
     nav {
       position: fixed;
       top: 0;
@@ -26,8 +27,20 @@
       padding: 1rem 2rem;
       z-index: 1000;
     }
-    .logo { color: #fff; text-decoration: none; font-weight: normal; letter-spacing: 2px; }
-    .nav-links { display: flex; gap: 2rem; }
+
+    .logo {
+      font-weight: normal;
+      letter-spacing: 2px;
+      text-decoration: none;
+      color: #fff;
+      font-size: 0.9rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+
     .nav-links a {
       color: #ccc;
       text-decoration: none;
@@ -35,9 +48,49 @@
       text-transform: uppercase;
       transition: color 0.2s ease;
     }
-    .nav-links a:hover { color: #ffffff; }
+
+    .nav-links a:hover {
+      color: #ffffff;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .hamburger span {
+      height: 2px;
+      width: 25px;
+      background: #fff;
+      margin: 4px 0;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #111;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        text-align: right;
+        padding: 1rem;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+
     header {
       height: 100vh;
+      background: rgba(0, 0, 0, 0.45);
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -45,48 +98,62 @@
       text-align: center;
       padding: 0 2rem;
     }
-    header h1 { font-size: 2.8rem; letter-spacing: 2px; margin-bottom: 1rem; }
+
+    header h1 {
+      font-size: 2.8rem;
+      font-weight: normal;
+      letter-spacing: 2px;
+      margin-bottom: 1rem;
+    }
+
     section {
       padding: 4rem 2rem;
-      max-width: 800px;
+      max-width: 700px;
       margin: 0 auto;
       text-align: center;
     }
+
     section p {
       font-size: 1rem;
       color: #ffffff;
       margin-bottom: 1.5rem;
     }
+
     footer {
       background: transparent;
       padding: 2rem 1rem;
-      text-align: center;
     }
-    .copyright { font-size: 0.75rem; color: white; }
   </style>
 </head>
-<body>
+<body oncontextmenu="return false;">
   <nav>
     <a class="logo" href="index.html">CROWNED BY SILENCE</a>
-    <div class="nav-links">
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="nav-links" id="nav-links">
       <a href="gallery.html">GALLERY</a>
       <a href="shop.html">SHOP</a>
       <a href="index.html#about">ABOUT</a>
       <a href="index.html#contact">CONTACT</a>
     </div>
   </nav>
+
   <header>
     <h1>TERMS & CONDITIONS</h1>
   </header>
+
   <section>
-    <p>By accessing this website and purchasing from Crowned By Silence, you agree to the following terms:</p>
-    <p>All artwork, text, and media are the exclusive property of CROWNED BY SILENCE. Reproduction, distribution, or commercial use without explicit written permission is strictly prohibited.</p>
-    <p>Each print is made to order and sold as a limited edition collectible. Due to the nature of fine art, all sales are final. Please inspect your item upon delivery; damaged items must be reported within 5 days.</p>
-    <p>Prices and availability are subject to change without notice. We reserve the right to refuse or cancel orders at our discretion.</p>
-    <p>Your personal data is protected under our privacy policy and used only for transaction and communication purposes.</p>
-    <p>Use of this website constitutes agreement with these terms and applicable international laws.</p>
-    <p>For questions or concerns, please contact: <a href="mailto:contact@crownedbysilence.com" style="color:#ffffff; text-decoration:underline;">contact@crownedbysilence.com</a></p>
+    <p>By accessing or using this site, you agree to be bound by the following terms and conditions. If you do not agree, please do not use our site.</p>
+    <p>All content, including images, text, and code, is owned by CROWNED BY SILENCE and may not be reproduced, copied, or distributed without permission.</p>
+    <p>All sales are final unless explicitly stated otherwise. We reserve the right to modify or discontinue products or services at any time without notice.</p>
+    <p>You agree not to misuse, resell, or replicate any products or content associated with CROWNED BY SILENCE.</p>
+    <p>This site may contain links to third-party services. We are not responsible for their content or policies.</p>
+    <p>These terms are governed by applicable international laws. For questions, contact us at: contact@crownedbysilence.com.</p>
   </section>
+
   <footer>
     <div style="display: flex; justify-content: center; gap: 2rem; align-items: center; padding: 1rem;">
       <a href="https://instagram.com/crownedbysilence" target="_blank">
@@ -98,8 +165,27 @@
         </svg>
       </a>
     </div>
-    <p class="copyright">© 2025 CROWNED BY SILENCE. ALL RIGHTS RESERVED.</p>
-    <p style="font-size: 0.75rem;"><a href="privacy.html" style="color: white; text-decoration: none;">PRIVACY</a></p>
+    <div style="text-align: center; color: white;">
+      <p style="font-size: 0.75rem;">© 2025 CROWNED BY SILENCE. ALL RIGHTS RESERVED.</p>
+      <div style="margin-top: 0.5rem;">
+        <a href="privacy.html" style="font-size: 0.75rem; color: white; margin-right: 10px;">POLICY</a>
+        <a href="terms.html" style="font-size: 0.75rem; color: white;">TERMS</a>
+      </div>
+    </div>
   </footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('nav-links');
+      nav.classList.toggle('active');
+    }
+
+    document.addEventListener('contextmenu', event => event.preventDefault());
+    document.querySelectorAll('img').forEach(img => {
+      img.setAttribute('draggable', 'false');
+      img.addEventListener('dragstart', e => e.preventDefault());
+    });
+    document.addEventListener('selectstart', e => e.preventDefault());
+  </script>
 </body>
 </html>
