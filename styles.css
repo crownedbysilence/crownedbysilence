@@ -105,13 +105,6 @@ header .logo {
   text-decoration: none;
 }
 
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    gap: 15px;
-  }
-}
-
 .menu {
   display: flex;
   gap: 20px;
