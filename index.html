@@ -3,47 +3,265 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Astrum Vera</title>
-  <link href="styles.css" rel="stylesheet"/>
+  <meta name="theme-color" content="#000000"/>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+  <title>CROWNED BY SILENCE — A Dark Fine Art Project</title>
+  <meta name="description" content="Museum-quality fine art photography prints for luxury interiors, collectors, designers, stylists, galleries, and creative spaces. Discover dark, gothic, and emotionally powerful wall art for modern homes.">
+  <meta name="keywords" content="limited edition art prints, fine art photography for collectors, black and white wall art for sale, art for luxury homes, art for interior designers, gothic wall art for home, dark academia wall art, museum quality fine art prints, art for modern homes, art for gallery walls, art for stylists and designers, art for fashion shoots, art for contemporary art galleries, collectible photography prints, emerging fine art photographers, emotional photography wall art, art for home decor trends 2025">
+  <meta property="og:title" content="Crowned By Silence — A Dark Fine Art Project"/>
+  <meta property="og:description" content="Dark fine art. Symbolic. Silent. Rare."/>
+  <meta property="og:url" content="https://www.crownedbysilence.com/"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://www.crownedbysilence.com/"/>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Alternative Calvin Klein', sans-serif;
+      color: #ffffff;
+      background: url('bg.png') no-repeat center center fixed;
+      background-size: cover;
+      scroll-behavior: smooth;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-weight: normal;
+      letter-spacing: 2px;
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      color: #ccc;
+      text-decoration: none;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: #ffffff;
+    }
+
+    header {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 2rem;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      font-weight: normal;
+      letter-spacing: 2px;
+      margin-bottom: 1rem;
+    }
+
+    header p {
+      font-size: 1rem;
+      color: #ffffff;
+      margin: 0;
+    }
+
+    .project-subtitle {
+      font-size: 0.85rem;
+      color: #ffffff;
+      margin-top: 0.5rem;
+      font-weight: normal;
+    }
+
+    .portfolio {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      padding: 4rem 2rem;
+    }
+
+    @media (min-width: 768px) {
+      .portfolio {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .portfolio img {
+      width: 100%;
+      height: auto;
+      pointer-events: none;
+      user-select: none;
+      -webkit-user-drag: none;
+      border-radius: 4px;
+    }
+
+    section {
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    section p {
+      font-size: 1rem;
+      color: #ffffff;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    footer {
+      background: transparent;
+      padding: 2rem 1rem;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .hamburger span {
+      height: 2px;
+      width: 25px;
+      background: #ffffff;
+      margin: 4px 0;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #111;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        text-align: right;
+        padding: 1rem;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+  </style>
 </head>
 <body>
+  <nav>
+    <a class="logo" href="index.html" style="font-size: 0.9rem;">CROWNED BY SILENCE</a>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="nav-links" id="nav-links">
+      <a href="gallery.html">GALLERY</a>
+      <a href="shop.html">SHOP</a>
+      <a href="#about">ABOUT</a>
+      <a href="#contact">CONTACT</a>
+    </div>
+  </nav>
 
   <header>
-    <a class="logo" href="index.html">ASTRUM VERA</a>
-    <nav class="menu">
-      <a href="privacy.html">privacy</a>
-      <a href="terms.html">terms</a>
-    </nav>
+    <h1>CROWNED BY SILENCE</h1>
+    <p>WHAT YOU SEE HERE WAS BUILT IN THE DARK</p>
+    <p class="project-subtitle">– A FINE ART PROJECT –</p>
   </header>
 
-  <div class="site-content">
-    <div class="center-content" style="margin-top: 40px; text-align: center;">
-      <h1 style="color: white;">ASTRUM VERA</h1>
-      <p style="color: white;">The true star.<br/>A real-time planetary chart.</p>
-
-      <div class="actions" style="margin-top: 80px;">
-        <a href="#" style="display:inline-block; background:transparent; color:white; text-decoration:none; padding:12px 24px; margin:8px; border-radius:5px; font-weight:bold; border:2px solid white;">Download for iOS</a>
-        <a href="#" style="display:inline-block; background:transparent; color:white; text-decoration:none; padding:12px 24px; margin:8px; border-radius:5px; font-weight:bold; border:2px solid white;">Download for Android</a>
-        <a href="#" style="display:inline-block; background:transparent; color:white; text-decoration:none; padding:12px 24px; margin:8px; border-radius:5px; font-weight:bold; border:2px solid white;">Donate</a>
-      </div>
+  <section id="portfolio" class="portfolio">
+    <img src="portfolio1.jpg" alt="Gallery Image 1" draggable="false"/>
+    <img src="portfolio2.jpg" alt="Gallery Image 2" draggable="false"/>
+    <img src="portfolio3.jpg" alt="Gallery Image 3" draggable="false"/>
+    <div style="text-align: center; margin-top: 2rem;">
+      <a href="gallery.html" class="view-all-button">ENTER THE GALLERY</a>
     </div>
+  </section>
+
+  <section id="about">
+    <h2>ABOUT</h2>
+    <p style="text-align: center; line-height: 4.0; margin-top: 2rem;">
+      CROWNED BY SILENCE<br>
+      A FINE ART PROJECT<br>
+      BORN IN DARKNESS,<br>
+      BUILT IN SILENCE,<br>
+      CARVED FROM PAIN.<br>
+      EACH IMAGE, A PORTAL.<br>
+      EACH WORD, A SPELL.
+    </p>
+  </section>
+
+  <section id="contact">
+    <h2>CONTACT</h2>
+    <div style="display: flex; justify-content: center; margin: 2rem 0;">
+      <form action="https://app.kit.com/forms/8046044/subscriptions" method="post" data-sv-form="8046044" data-uid="c4462138a5" data-format="inline" data-version="5">
+        <input name="email_address" type="email" placeholder="Email Address" required style="padding: 10px; border-radius: 4px; border: none; margin-right: 10px;" />
+        <button type="submit" style="background-color: transparent; border: 1px solid white; color: white; padding: 0.75rem 1.5rem; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase; cursor: pointer;">SUBSCRIBE</button>
+      </form>
+    </div>
+  </section>
+
+  <div style="display: flex; justify-content: center; margin: 2rem 0 1rem;">
+    <img src="crown-sigil.png" alt="Crowned By Silence Sigil" style="height: 96px; opacity: 0.9; object-fit: contain;" />
   </div>
 
   <footer>
     <div style="display: flex; justify-content: center; gap: 2rem; align-items: center; padding: 1rem;">
-      <a href="https://instagram.com/astrumvera" target="_blank">
-        <img alt="Instagram" src="instagram.svg" style="width: 24px; height: 24px;"/>
+      <a href="https://instagram.com/crownedbysilence" target="_blank">
+        <img src="instagram.svg" alt="Instagram" style="width: 24px; height: 24px;">
       </a>
-      <a href="mailto:contact@astrumvera.com">
-        <svg fill="#fff" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12 13.065L.75 4.5h22.5L12 13.065zm0 2.17L.75 6.67v12.83h22.5V6.67L12 15.235z"></path>
+      <a href="mailto:contact@crownedbysilence.com">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#fff" viewBox="0 0 24 24">
+          <path d="M12 13.065L.75 4.5h22.5L12 13.065zm0 2.17L.75 6.67v12.83h22.5V6.67L12 15.235z"/>
         </svg>
       </a>
     </div>
     <div style="text-align: center; color: white;">
-      <p style="font-size: 0.75rem; margin: 0;">© 2025 ASTRUM VERA. ALL RIGHTS RESERVED.</p>    
+      <p style="font-size: 0.75rem; margin: 0;">© 2025 CROWNED BY SILENCE. ALL RIGHTS RESERVED.</p>
+      <div style="margin-top: 0.5rem;">
+        <a href="privacy.html" style="font-size: 0.75rem; color: white; margin-right: 10px;">POLICY</a>
+        <a href="terms.html" style="font-size: 0.75rem; color: white;">TERMS</a>
+      </div>
     </div>
   </footer>
 
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('nav-links');
+      nav.classList.toggle('active');
+    }
+
+    document.addEventListener('contextmenu', event => event.preventDefault());
+    document.querySelectorAll('img').forEach(img => {
+      img.setAttribute('draggable', 'false');
+      img.addEventListener('dragstart', e => e.preventDefault());
+    });
+    document.addEventListener('selectstart', e => e.preventDefault());
+  </script>
 </body>
 </html>
